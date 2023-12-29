@@ -45,7 +45,7 @@ body,html {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-image: url("./img/top_img.png");
+    background-image: url("./img/gr_top_img.png");
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
@@ -54,7 +54,8 @@ body,html {
 }
 
 .wrap .header_cont .login_nav {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -73,7 +74,8 @@ body,html {
 }
 
 .wrap .header {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     display: flex;
     margin: 0 auto;
     flex-direction: row;
@@ -123,7 +125,8 @@ body,html {
 
 
 .wrap .top_cont {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     height: 400px;
     margin: 0 auto;
     padding: 30px 50px 30px 50px;
@@ -169,11 +172,11 @@ body,html {
     background-repeat: no-repeat;
 
     display: none;
-
 }
 
 .wrap .top_cont .field_wrap .field_menu .chart1 {
     background-image: url("./img/ex_chart1.png");
+    display: block;
 }
 
 
@@ -222,7 +225,8 @@ body,html {
 .wrap .center_cont .center_wrap {
     display: flex;
     flex-direction: row;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 50px;
     height: 100%;
@@ -392,7 +396,8 @@ body,html {
 
 .wrap .bottom_cont {
     height: 100%;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 100px 50px 80px 50px;
     border-top: 1px solid #999999;
@@ -475,12 +480,16 @@ body,html {
 
 .wrap .footer_area {
     height: 100%;
+    width: 100%;
     background-color: #ffffff;
     color: #595959;
-    padding-bottom: 50px;
+    padding: 0 50px 50px 50px;
 }
 
 .wrap .footer_area .logo_wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
     height: 105px;
     display: flex;
     flex-direction: row;
@@ -489,8 +498,14 @@ body,html {
     column-gap: 25px;
 }
 
+.wrap .footer_area .logo_wrap > img {
+    width: 100%;
+}
+
 
 .wrap .footer_area .footer_wrap {
+    margin: 0 auto;
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -501,7 +516,8 @@ body,html {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0 300px 0 30px;
+    margin-left: 20px;
+    flex: 1;
 }
 
 
