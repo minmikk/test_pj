@@ -28,7 +28,6 @@ body,html {
     font-weight: 500;
 }
 
-
 .wrap {
     margin: 0 auto;
     width: 100%;
@@ -38,6 +37,7 @@ body,html {
     align-content: center;
 }
 
+/*header start*/
 .wrap .header_cont {
     width: 100%;
     height: 600px;
@@ -50,7 +50,6 @@ body,html {
     background-size: auto;
     object-fit: cover;
     background-position: center;
-
 }
 
 .wrap .header_cont .login_nav {
@@ -114,7 +113,6 @@ body,html {
     margin-bottom: 30px;
 }
 
-
 .wrap .main_cont .text_center {
     align-content: center;
 }
@@ -123,6 +121,10 @@ body,html {
     margin: 0 0 5px 0;
 }
 
+/*header end*/
+
+
+/*chart content start*/
 
 .wrap .top_cont {
     max-width: 1200px;
@@ -179,12 +181,10 @@ body,html {
     display: block;
 }
 
-
 .wrap .top_cont .field_wrap .field_menu .chart2 {
     background-image: url("./img/ex_chart2.png");
     top: -50px;
 }
-
 
 .wrap .top_cont .field_wrap .field_menu:last-child {
     border-bottom: none;
@@ -202,15 +202,10 @@ body,html {
     display: flex;
 }
 
+/*chart content end*/
 
 
-
-
-
-
-
-
-
+/*curriculum content start*/
 
 .wrap .center_cont {
     width: 100%;
@@ -383,7 +378,6 @@ body,html {
     background-image: url("./img/BHoverDirectionsCar.png");
 }
 
-
 .wrap .center_cont .center_wrap .curriculum_info .info_box .curri_icon.icon9 {
     background-image: url("./img/security.png");
 }
@@ -392,7 +386,10 @@ body,html {
     background-image: url("./img/BHoversecurity.png");
 }
 
+/*curriculum content end*/
 
+
+/*notice content start*/
 
 .wrap .bottom_cont {
     height: 100%;
@@ -438,8 +435,6 @@ body,html {
 
 .wrap .bottom_cont .board_wrap .notice_wrap .title_wrap .more {}
 
-
-
 .wrap .bottom_cont .board_wrap .notice_wrap .list_wrap {
     display: flex;
     flex-direction: column;
@@ -452,7 +447,6 @@ body,html {
     margin: 10px 0;
     cursor: pointer;
     transition: ease-in-out all 0.3s;
-
 }
 
 .wrap .bottom_cont .board_wrap .notice_wrap .list_wrap .list_item:hover {
@@ -460,23 +454,22 @@ body,html {
 
 .wrap .bottom_cont .board_wrap .notice_wrap .list_wrap .list_item:hover .list_title {
     font-weight: bold;
-
 }
 
 .wrap .bottom_cont .board_wrap .notice_wrap .list_wrap .list_item .list_title {
     font-size: 15px;
-
 }
 
 .wrap .bottom_cont .board_wrap .notice_wrap .list_wrap .list_item .list_date {
     font-size: 13px;
     margin: 5px 0 10px 0;
     color: #868686;
-
 }
 
+/*notice content end*/
 
 
+/*footer start*/
 
 .wrap .footer_area {
     height: 100%;
@@ -498,10 +491,9 @@ body,html {
     column-gap: 25px;
 }
 
-.wrap .footer_area .logo_wrap > img {
+.wrap .footer_area .logo_wrap > a > img {
     width: 100%;
 }
-
 
 .wrap .footer_area .footer_wrap {
     margin: 0 auto;
@@ -509,7 +501,6 @@ body,html {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 
 .wrap .footer_area .footer_wrap .footer_content {
@@ -520,7 +511,6 @@ body,html {
     flex: 1;
 }
 
-
 .wrap .footer_area .footer_wrap .footer_content .notice_wrap {
     display: flex;
     flex-direction: row;
@@ -530,7 +520,7 @@ body,html {
 
 .wrap .footer_area .footer_wrap .footer_content .notice_wrap > div {
     margin-right: 20px;
-    font-size: 15px;
+    font-size: 0.8em;
     color: black;
     cursor: pointer;
 }
@@ -542,4 +532,29 @@ body,html {
 .wrap .footer_area .footer_wrap .footer_content .address {
     font-size: 12px;
     color: #595959;
+}
+.wrap .footer_area .footer_wrap > div > img {
+    width: 100%;
+}
+.wrap .footer_area .footer_wrap > a > img {
+    width: 100%;
+}
+
+/*footer end*/
+
+
+
+
+/**/
+
+@media (max-width: 800px)  {
+
+    .wrap .footer_area {
+        padding: 0 10px 50px 10px;
+    }
+    .wrap .footer_area .logo_wrap {
+        /*background-color: #999999;*/
+        column-gap: 15px;
+    }
+
 }
