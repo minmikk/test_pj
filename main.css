@@ -45,9 +45,9 @@ body,html {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-image: url("./img/gr_top_img.png");
+    background-image: url("./img/gr_top_img_1.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     object-fit: cover;
     background-position: center;
 
