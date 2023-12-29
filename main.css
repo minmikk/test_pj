@@ -45,7 +45,7 @@ body,html {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-image: url("/img/top_img.png");
+    background-image: url("./img/top_img.png");
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
@@ -173,12 +173,12 @@ body,html {
 }
 
 .wrap .top_cont .field_wrap .field_menu .chart1 {
-    background-image: url("/img/ex_chart1.png");
+    background-image: url("./img/ex_chart1.png");
 }
 
 
 .wrap .top_cont .field_wrap .field_menu .chart2 {
-    background-image: url("/img/ex_chart2.png");
+    background-image: url("./img/ex_chart2.png");
     top: -50px;
 }
 
@@ -212,7 +212,7 @@ body,html {
 .wrap .center_cont {
     width: 100%;
     height: 500px;
-    background-image: url("/img/cont_img.png");
+    background-image: url("./img/cont_img.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -308,84 +308,84 @@ body,html {
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box .curri_icon.icon1 {
-    background-image: url("/img/ShowChart.png");
+    background-image: url("./img/ShowChart.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box.box1:hover .icon1 {
-    background-image: url("/img/BHoverShowChart.png");
+    background-image: url("./img/BHoverShowChart.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box .curri_icon.icon2 {
-    background-image: url("/img/Insights-1.png");
+    background-image: url("./img/Insights-1.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box.box2:hover .icon2 {
-    background-image: url("/img/BHoverInsights-1.png");
+    background-image: url("./img/BHoverInsights-1.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box .curri_icon.icon3 {
-    background-image: url("/img/Insights.png");
+    background-image: url("./img/Insights.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box.box3:hover .icon3 {
-    background-image: url("/img/BHoverInsights.png");
+    background-image: url("./img/BHoverInsights.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box .curri_icon.icon3 {
-    background-image: url("/img/Insights.png");
+    background-image: url("./img/Insights.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box.box3:hover .icon3 {
-    background-image: url("/img/BHoverInsights.png");
+    background-image: url("./img/BHoverInsights.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box .curri_icon.icon4 {
-    background-image: url("/img/Memory.png");
+    background-image: url("./img/Memory.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box.box4:hover .icon4 {
-    background-image: url("/img/BHoverMemory.png");
+    background-image: url("./img/BHoverMemory.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box .curri_icon.icon5 {
-    background-image: url("/img/Computer.png");
+    background-image: url("./img/Computer.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box.box5:hover .icon5 {
-    background-image: url("/img/BHoverComputer.png");
+    background-image: url("./img/BHoverComputer.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box .curri_icon.icon6 {
-    background-image: url("/img/Wifi.png");
+    background-image: url("./img/Wifi.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box.box6:hover .icon6 {
-    background-image: url("/img/BHoverWifi.png");
+    background-image: url("./img/BHoverWifi.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box .curri_icon.icon7 {
-    background-image: url("/img/Cloud.png");
+    background-image: url("./img/Cloud.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box.box7:hover .icon7 {
-    background-image: url("/img/BHoverCloud.png");
+    background-image: url("./img/BHoverCloud.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box .curri_icon.icon8 {
-    background-image: url("/img/DirectionsCar.png");
+    background-image: url("./img/DirectionsCar.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box.box8:hover .icon8 {
-    background-image: url("/img/BHoverDirectionsCar.png");
+    background-image: url("./img/BHoverDirectionsCar.png");
 }
 
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box .curri_icon.icon9 {
-    background-image: url("/img/security.png");
+    background-image: url("./img/security.png");
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box.box9:hover .icon9 {
-    background-image: url("/img/BHoversecurity.png");
+    background-image: url("./img/BHoversecurity.png");
 }
 
 
