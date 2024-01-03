@@ -228,6 +228,7 @@ body,html {
     background-repeat: no-repeat;
     background-position: center;
     object-fit: cover;
+    padding: 90px 0;
 }
 
 .wrap .center_cont .center_wrap {
@@ -244,25 +245,34 @@ body,html {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .wrap .center_cont .center_wrap .curriculum_wrap .curri_title {
     color: #86f8ff;
     font-size: 36px;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
 }
 
 .wrap .center_cont .center_wrap .curriculum_wrap .curri_text_wrap {
     white-space: break-spaces;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 .wrap .center_cont .center_wrap .curriculum_wrap .curri_text {
     font-size: 15px;
     line-height: 1.5;
-
+    width: 75%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
+
+.wrap .center_cont .center_wrap .curriculum_wrap .curri_text p {}
 
 .wrap .center_cont .center_wrap .curriculum_wrap .curri_btn {
     width: fit-content;
@@ -271,7 +281,7 @@ body,html {
     background: #86f8ff;
     color: black;
     border-radius: 8px;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
@@ -293,7 +303,7 @@ body,html {
     column-gap: 10px;
     row-gap: 5px;
     align-items: center;
-    margin: 130px 0;
+    margin: 50px 0;
 }
 
 .wrap .center_cont .center_wrap .curriculum_info .info_box {
@@ -611,8 +621,13 @@ body,html {
         width: 40px;
     }
 
+
     .wrap .center_cont .center_wrap .curriculum_info .box_title {
         font-size: 14px;
+    }
+
+    .wrap .center_cont .center_wrap .curriculum_wrap .curri_text {
+        width: 95%;
     }
 
 
