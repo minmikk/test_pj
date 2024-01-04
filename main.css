@@ -55,7 +55,7 @@ body,html {
     background-size: auto;
     object-fit: cover;
     background-position: center;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
 }
 
 .wrap .header_cont .login_nav {
@@ -134,12 +134,15 @@ body,html {
     max-width: 1200px;
     width: 100%;
     height: 400px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    margin: 50px auto 50px auto;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    /*background-color: rgba(221, 221, 221, 0.26);*/
 }
 
 .wrap .top_cont .ban {
@@ -170,9 +173,9 @@ body,html {
 
 .wrap .top_cont .field_wrap .field_menu .chart {
     position: absolute;
-    top: 0;
-    right: 337px;
-    width: 763px;
+    top: 30px;
+    right: 400px;
+    width: 730px;
     height: 363px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -182,12 +185,11 @@ body,html {
 
 .wrap .top_cont .field_wrap .field_menu .chart1 {
     background-image: url("./img/ex_chart1.png");
-    display: block;
 }
 
 .wrap .top_cont .field_wrap .field_menu .chart2 {
     background-image: url("./img/ex_chart2.png");
-    top: -50px;
+    top: -30px;
 }
 
 .wrap .top_cont .field_wrap .field_menu:last-child {
@@ -628,6 +630,17 @@ body,html {
 
     .wrap .center_cont .center_wrap .curriculum_wrap .curri_text {
         width: 95%;
+    }
+
+
+    .wrap .top_cont {
+        padding: 0 30px;
+    }
+
+    .wrap .top_cont .field_wrap .field_menu .chart {
+        top: 110px;
+        right: 280px;
+        width: 450px;
     }
 
 
