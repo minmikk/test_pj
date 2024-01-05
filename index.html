@@ -96,15 +96,11 @@
 
         </div><!--header_cont-->
 
-<<<<<<< HEAD
-        <div class="top_cont main_cont">
-            <div class="ban">
-              <canvas class="graph"></canvas>
-            </div><!--ban-->
-=======
         <div class="top_cont">
-            <div class="ban"></div><!--ban-->
->>>>>>> 0f245ddf85a2cb3a282bcee307e04262a9a11187
+            <div class="ban">
+                <canvas class="graph"></canvas>
+            </div><!--ban-->
+
 
             <div class="field_wrap">
                 <div class="field_menu menu1 on">첨단분야 교육과정 개발</div>
@@ -117,57 +113,7 @@
             </div><!--field_wrap-->
 
         </div><!--top_cont-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script>
-// chart
-const ctx = document.querySelector('.graph');
-const myChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-    datasets: [{
-      data: [100,200,300,400,500,600,1000,2000,3000,600,300,800],
-      borderColor: [
-        'rgba(134, 248, 255, 1)'
-      ],
-      pointStyle: false,
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-          beginAtZero: true
-      }
-    },
-    plugins: {
-      legend: {
-        display: false
-      }
-    }      
-  }
-});
 
-// tab : ACTIVE
-const list = document.querySelectorAll('.field_menu');
-function siblings(el) {
-  let sibChildren = el.parentElement.children;
-  let sibArr = [];
-  Array.from(sibChildren).forEach(x => {
-		sibArr.push(x)
-	});
-  return sibArr.filter(node => node != el);
-};
-list.forEach((btn, idx) => {
-  btn.addEventListener('click',function(e){
-    e.preventDefault();
-    siblings(e.currentTarget).forEach((i) => { 
-      i.classList.remove('on')
-    });
-    list[idx].classList.add('on')
-  });
-});
-</script>
 
         <div class="center_cont">
             <div class="center_wrap">
@@ -241,7 +187,6 @@ list.forEach((btn, idx) => {
                     </div>
                 </div><!--curriculum_info-->
             </div><!--center_wrap-->
-
 
         </div><!--center_cont-->
 
@@ -415,16 +360,58 @@ list.forEach((btn, idx) => {
 </body>
 
 <script src="jquery-3.6.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
-    $(document).ready(function(){ /* 문서가 준비되면 다음 함수 실행 */
-        $('#menu_wrapper').mouseover(function(){
-            $('#sub_wrap').slideDown();
+    // chart
+    const ctx = document.querySelector('.graph');
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            datasets: [{
+                data: [100,200,300,400,500,600,1000,2000,3000,600,300,800],
+                borderColor: [
+                    'rgba(134, 248, 255, 1)'
+                ],
+                pointStyle: false,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+
+    // tab : ACTIVE
+    const list = document.querySelectorAll('.field_menu');
+    function siblings(el) {
+        let sibChildren = el.parentElement.children;
+        let sibArr = [];
+        Array.from(sibChildren).forEach(x => {
+            sibArr.push(x)
         });
-        $('#menu_wrapper').mouseleave(function(){
-            $('#sub_wrap').slideUp();
+        return sibArr.filter(node => node != el);
+    };
+    list.forEach((btn, idx) => {
+        btn.addEventListener('click',function(e){
+            e.preventDefault();
+            siblings(e.currentTarget).forEach((i) => {
+                i.classList.remove('on')
+            });
+            list[idx].classList.add('on')
         });
     });
 </script>
+
 
 
 </html>
