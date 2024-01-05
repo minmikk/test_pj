@@ -11,20 +11,74 @@
 
     <div class="wrap">
         <div class="header_cont">
-            <div class="login_nav main_side_padding">
-                <div class="flex"></div>
-                <div>로그인</div>
-                <div>회원가입</div>
-            </div><!--login_nav-->
-            <div class="header main_side_padding">
+            <div class="header">
                 <div><img src="./img/header_logo.png" alt="logo"></div>
-                <div class="title">차세대통신사업단</div>
+<!--                <div class="title">차세대통신사업단</div>-->
                 <div class="flex"></div>
-                <div class="menu">사업단소개</div>
-                <div class="menu">교육과정</div>
-                <div class="menu">디지털배지</div>
-                <div class="menu">커뮤니티</div>
+
+                <div class="menu_wrapper" id="menu_wrapper">
+                    <div class="menu">사업단소개</div>
+                    <div class="menu">교육과정</div>
+                    <div class="menu">디지털배지</div>
+                    <div class="menu">커뮤니티</div>
+
+                    <div class="bar"></div>
+                    <div class="login menu">로그인</div>
+
+                    <div class="sub_wrap" id="sub_wrap">
+                        <div class="flex"></div>
+                        <div class="sub_menu_wrap">
+                            <ul class="sub">
+                                <li class="s_menu"><a href="#">단장 인사말</a></li>
+                                <li class="s_menu"><a href="#">사업 소개</a></li>
+                                <li class="s_menu"><a href="#">조직구성</a></li>
+                                <li class="s_menu"><a href="#">찾아오시는길</a></li>
+                            </ul>
+
+                            <ul class="sub">
+                                <li class="s_menu"><a href="#">교육과정 소개</a></li>
+                                <li class="s_menu"><a href="#">교육 이수 안내</a></li>
+                                <li class="s_menu"><a href="#">교육 신청</a></li>
+                            </ul>
+
+                            <ul class="sub">
+                                <li class="s_menu"><a href="#">디지털배지 소개</a></li>
+                                <li class="s_menu"><a href="#">발급 절차</a></li>
+                                <li class="s_menu"><a href="#">디지털배지 진위여부 확인</a></li>
+                            </ul>
+
+                            <ul class="sub">
+                                <li class="s_menu"><a href="#">공지사항</a></li>
+                                <li class="s_menu"><a href="#">자료실</a></li>
+                                <li class="s_menu"><a href="#">FQA</a></li>
+                                <li class="s_menu"><a href="#">Q&A</a></li>
+                                <li class="s_menu"><a href="#">관련사이트</a></li>
+                            </ul>
+                        </div><!--sub_menu_wrap-->
+                    </div><!--sub_wrap-->
+
+
+                </div><!--menu_wrapper-->
+
+                <div class="ham_menu_wrap">
+                    <div class="ham_bar"></div>
+
+
+
+
+
             </div><!--header-->
+
+
+
+            </div><!--ham_menu_wrap-->
+
+
+
+
+
+
+
 
             <div class="main_cont">
                 <div style="font-size: 28px;">미래혁신기술의 중심</div>
@@ -38,12 +92,19 @@
             </div><!--main_cont-->
 
 
+
+
         </div><!--header_cont-->
 
+<<<<<<< HEAD
         <div class="top_cont main_cont">
             <div class="ban">
               <canvas class="graph"></canvas>
             </div><!--ban-->
+=======
+        <div class="top_cont">
+            <div class="ban"></div><!--ban-->
+>>>>>>> 0f245ddf85a2cb3a282bcee307e04262a9a11187
 
             <div class="field_wrap">
                 <div class="field_menu menu1 on">첨단분야 교육과정 개발</div>
@@ -109,16 +170,12 @@ list.forEach((btn, idx) => {
 </script>
 
         <div class="center_cont">
-            <div class="center_wrap main_side_padding">
+            <div class="center_wrap">
                 <div class="curriculum_wrap">
                     <div class="curri_title">교육과정</div>
                     <div class="curri_text_wrap">
                         <div class="curri_text">
-                            차세대통신사업단은 마이크로디그리를 운영,
-                            그에 맞는 포털사이트 LMS와 연계하여
-                            교과목 신청, 학사정보, 온라인 평가를 진행하고
-                            이를 수료한 학생에게 디지털 뱃지를 부여하여
-                            맞춤 취업활동까지 연계할 수 있습니다.
+                            <p>차세대통신사업단은 마이크로디그리를 운영, 그에 맞는 포털사이트 LMS와 연계하여 교과목 신청, 학사정보, 온라인 평가를 진행하고 이를 수료한 학생에게 디지털 뱃지를 부여하여 맞춤 취업활동까지 연계할 수 있습니다.</p>
                         </div><!--curri_text-->
                     </div><!--curri_text_wrap-->
                     <div class="curri_btn">교육신청 바로가기</div>
@@ -188,7 +245,7 @@ list.forEach((btn, idx) => {
 
         </div><!--center_cont-->
 
-        <div class="bottom_cont main_side_padding">
+        <div class="bottom_cont">
             <div class="title">차세대통신사업단 소식</div>
             <div class="board_wrap">
                 <div class="notice_wrap">
@@ -356,4 +413,18 @@ list.forEach((btn, idx) => {
     </div><!--wrap-->
 
 </body>
+
+<script src="jquery-3.6.1.min.js"></script>
+<script>
+    $(document).ready(function(){ /* 문서가 준비되면 다음 함수 실행 */
+        $('#menu_wrapper').mouseover(function(){
+            $('#sub_wrap').slideDown();
+        });
+        $('#menu_wrapper').mouseleave(function(){
+            $('#sub_wrap').slideUp();
+        });
+    });
+</script>
+
+
 </html>
