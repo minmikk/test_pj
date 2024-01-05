@@ -9,6 +9,14 @@ body,html {
     box-sizing: border-box;
     font-family: 'Pretendard-Regular';
 }
+
+ul , li , a {
+    text-decoration: none;
+    color: initial;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -58,34 +66,29 @@ body,html {
     /*margin-bottom: 50px;*/
 }
 
-.wrap .header_cont .login_nav {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    padding-top: 10px;
-}
-
-.wrap .header_cont .login_nav >div {
-    margin-left: 20px;
-    font-size: 14px;
-    transition: ease-in-out all 0.3s;
-    cursor: pointer;
-}
-
-.wrap .header_cont .login_nav >div:hover {
-    color: #86f8ff;
-}
-
 .wrap .header {
     max-width: 1200px;
     width: 100%;
     display: flex;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.wrap .header .bar {
+    border: 1px solid #dddddd;
+    /*width: 1px;*/
+    height: 15px;
+    margin: 0 10px;
+}
+
+.wrap .header .login {
+    color: #86f8ff;
+}
+
+.wrap .header .login:hover {
+    color: #ffffff;
 }
 
 .wrap .header .title {
@@ -97,16 +100,27 @@ body,html {
     cursor: pointer;
 }
 
-.wrap .header .menu {
-    padding-left: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: ease-in-out all 0.3s;
+.wrap .header .menu_wrapper {
+    display: flex;
+    flex-direction: row;
+    transition: ease-in-out all 0.5s;
+    position: relative;
 }
 
-.wrap .header .menu:hover {
-    color: #86f8ff;
+.wrap .header .menu_wrapper .menu {
+    margin: 0 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: ease-in-out all 0.1s;
 }
+
+.wrap .header .menu:last-child {
+    padding: 0;
+}
+
+/*.wrap .header .menu:hover {*/
+/*    color: #86f8ff;*/
+/*}*/
 
 .wrap .main_cont {
     margin-top: 140px;
@@ -126,6 +140,107 @@ body,html {
 }
 
 /*header end*/
+
+
+/*.wrap .header .menu_wrapper:hover .sub_wrap {display: flex}*/
+
+/*sub menu start*/
+
+.sub_wrap {
+    width: 100vw;
+    /*max-width: 1200px;*/
+    display: flex;
+    flex-direction: row;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 60px;
+
+    position: absolute;
+    top: 30px;
+    right: -51px;
+    display: none;
+}
+
+.sub_wrap  .sub_menu_wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.sub_wrap  .sub_menu_wrap .sub {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.sub_wrap  .sub_menu_wrap .sub .s_menu {
+    font-size: 15px;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.sub_wrap  .sub_menu_wrap .sub .s_menu a {
+    color: #ffffff;
+    transition: ease-in-out all 0.1s;
+}
+
+.sub_wrap  .sub_menu_wrap .sub .s_menu:hover a {
+    color: #86f8ff;
+}
+
+    /*sub menu end*/
+
+
+    /*ham menu menu start*/
+
+.wrap .header_cont .header .ham_menu_wrap {
+    width: 100%;
+    display: none !important;
+
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.wrap .header_cont .header .ham_menu_wrap .ham_bar {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    position: relative;
+}
+
+.wrap .header_cont .header .ham_menu_wrap .ham_bar::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    /*border: 1px solid red ;*/
+    background-color: white;
+}
+
+.wrap .header_cont .header .ham_menu_wrap .ham_bar::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    /*border: 1px solid red ;*/
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+    /*ham menu menu end*/
+
 
 
 /*chart content start*/
@@ -168,7 +283,7 @@ body,html {
     align-items: center;
     border-bottom: 1px solid #86f8ff;
     cursor: pointer;
-    transition: ease-in-out all 0.3s;
+    transition: ease-in-out all 0.1s;
 }
 
 .wrap .top_cont .field_wrap .field_menu .chart {
@@ -287,7 +402,7 @@ body,html {
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
-    transition: ease-in-out all 0.3s;
+    transition: ease-in-out all 0.1s;
 }
 
 .wrap .center_cont .center_wrap .curriculum_wrap .curri_btn:hover {
@@ -318,7 +433,7 @@ body,html {
     border: 1px solid #86f8ff;
     border-radius: 8px;
     color: #86f8ff;
-    transition: ease-in-out all 0.3s;
+    transition: ease-in-out all 0.1s;
     cursor: pointer;
     white-space: nowrap;
 }
@@ -339,7 +454,7 @@ body,html {
     width: 100%;
     height: 100%;
     background-position: right;
-    transition: ease-in-out all 0.3s;
+    transition: ease-in-out all 0.1s;
     background-size: contain !important;
 }
 
@@ -485,7 +600,7 @@ body,html {
     border-bottom: 1px solid #868686;
     margin: 10px 0;
     cursor: pointer;
-    transition: ease-in-out all 0.3s;
+    transition: ease-in-out all 0.1s;
 }
 
 .wrap .bottom_cont .board_wrap .notice_wrap .list_wrap .list_item:hover {
@@ -600,6 +715,17 @@ body,html {
         /*background-color: #999999;*/
         column-gap: 15px;
     }
+
+    .wrap .header .menu_wrapper {
+        display: none;
+    }
+
+    .wrap .header_cont .header .ham_menu_wrap {
+        display: flex !important;
+
+    }
+
+
 
     .wrap .center_cont .center_wrap .curriculum_wrap {
         width: 35%;
