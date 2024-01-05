@@ -176,10 +176,10 @@ body,html {
     height: 363px;
     background-size: contain;
     background-repeat: no-repeat;
-
     display: none;
 }
 
+/*
 .wrap .top_cont .field_wrap .field_menu .chart1 {
     background-image: url("./img/ex_chart1.png");
     display: block;
@@ -189,19 +189,22 @@ body,html {
     background-image: url("./img/ex_chart2.png");
     top: -50px;
 }
+*/
 
 .wrap .top_cont .field_wrap .field_menu:last-child {
     border-bottom: none;
 }
 
-.wrap .top_cont .field_wrap .field_menu:hover {
+.wrap .top_cont .field_wrap .field_menu:hover,
+.wrap .top_cont .field_wrap .field_menu.on {
     color: #86f8ff;
 }
 
-.wrap .top_cont .field_wrap .menu1:hover .chart1 {
-    display: flex;
+.wrap .top_cont .field_wrap .field_menu.on .chart {
+    display: block;
 }
 
+/*
 .wrap .top_cont .field_wrap .menu2:hover .chart2 {
     display: flex;
 }
@@ -209,7 +212,7 @@ body,html {
 .wrap .top_cont .field_wrap .menu2:hover .menu1> .chart1 {
     display: none !important;
 }
-
+*/
 
 
 

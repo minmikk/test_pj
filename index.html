@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>차세대통신사업단</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="chart.css">
 </head>
 <body>
 
@@ -40,18 +41,13 @@
         </div><!--header_cont-->
 
         <div class="top_cont main_cont">
-            <div class="ban"></div><!--ban-->
+            <div class="ban">
+              <canvas class="graph"></canvas>
+            </div><!--ban-->
 
             <div class="field_wrap">
-                <div class="field_menu menu1">
-                    <div class="menu">첨단분야 교육과정 개발</div>
-                    <div class="chart chart1"></div>
-                </div>
-
-                <div class="field_menu menu2">
-                    첨단분야 교육과정 운영
-                    <div class="chart chart2"></div>
-                </div>
+                <div class="field_menu menu1 on">첨단분야 교육과정 개발</div>
+                <div class="field_menu menu2">첨단분야 교육과정 운영</div>
                 <div class="field_menu menu3">진로</div>
                 <div class="field_menu menu4">첨단분야 교육과정 공유/확산</div>
                 <div class="field_menu menu5">첨단분야 교원 확보 수</div>
@@ -60,6 +56,57 @@
             </div><!--field_wrap-->
 
         </div><!--top_cont-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+// chart
+const ctx = document.querySelector('.graph');
+const myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    datasets: [{
+      data: [100,200,300,400,500,600,1000,2000,3000,600,300,800],
+      borderColor: [
+        'rgba(134, 248, 255, 1)'
+      ],
+      pointStyle: false,
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+          beginAtZero: true
+      }
+    },
+    plugins: {
+      legend: {
+        display: false
+      }
+    }      
+  }
+});
+
+// tab : ACTIVE
+const list = document.querySelectorAll('.field_menu');
+function siblings(el) {
+  let sibChildren = el.parentElement.children;
+  let sibArr = [];
+  Array.from(sibChildren).forEach(x => {
+		sibArr.push(x)
+	});
+  return sibArr.filter(node => node != el);
+};
+list.forEach((btn, idx) => {
+  btn.addEventListener('click',function(e){
+    e.preventDefault();
+    siblings(e.currentTarget).forEach((i) => { 
+      i.classList.remove('on')
+    });
+    list[idx].classList.add('on')
+  });
+});
+</script>
 
         <div class="center_cont">
             <div class="center_wrap main_side_padding">
