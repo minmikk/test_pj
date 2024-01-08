@@ -11,67 +11,88 @@
 
     <div class="wrap">
         <div class="header_cont">
-            <div class="header">
-                <div><img src="./img/header_logo.png" alt="logo"></div>
-<!--                <div class="title">차세대통신사업단</div>-->
-                <div class="flex"></div>
-
-                <div class="menu_wrapper" id="menu_wrapper">
-                    <div class="menu">사업단소개</div>
-                    <div class="menu">교육과정</div>
-                    <div class="menu">디지털배지</div>
-                    <div class="menu">커뮤니티</div>
-
-                    <div class="bar"></div>
-                    <div class="login menu">로그인</div>
-
-                    <div class="sub_wrap" id="sub_wrap">
-                        <div class="flex"></div>
-                        <div class="sub_menu_wrap">
-                            <ul class="sub">
-                                <li class="s_menu"><a href="#">단장 인사말</a></li>
-                                <li class="s_menu"><a href="#">사업 소개</a></li>
-                                <li class="s_menu"><a href="#">조직구성</a></li>
-                                <li class="s_menu"><a href="#">찾아오시는길</a></li>
+            <div id="wrap">
+                <div id="header" class="main_side_padding">
+                    <div class="row">
+                        <div id="logo">
+                            <img src="./img/header_logo.png" alt="logo">
+                        </div>
+                        <div class="flex_1"></div>
+                        <div id="gnb" onmouseover = "over()" onmouseout="out()">
+                            <ul class="row">
+                                <li><a href="#">사업단소개</a></li>
+                                <li><a href="#">교육과정</a></li>
+                                <li><a href="#">디지털배지</a></li>
+                                <li><a href="#">커뮤니티</a></li>
                             </ul>
+                            <div class="login">로그인</div>
+                        </div>
+                    </div><!--row-->
 
-                            <ul class="sub">
-                                <li class="s_menu"><a href="#">교육과정 소개</a></li>
-                                <li class="s_menu"><a href="#">교육 이수 안내</a></li>
-                                <li class="s_menu"><a href="#">교육 신청</a></li>
+
+
+
+                    <div class="snb_area" onmouseover="over()" onmouseout="out()">
+                        <div class="snb_bg">
+                            <div class="flex_1"></div>
+                            <ul>
+                                <li><a href="#">단장 인사말</a></li>
+                                <li><a href="#">사업 소개</a><li>
+                                <li><a href="#">조직구성</a></li>
+                                <li><a href="#">찾아오시는길</a></li>
                             </ul>
-
-                            <ul class="sub">
-                                <li class="s_menu"><a href="#">디지털배지 소개</a></li>
-                                <li class="s_menu"><a href="#">발급 절차</a></li>
-                                <li class="s_menu"><a href="#">디지털배지 진위여부 확인</a></li>
+                            <ul>
+                                <li><a href="#">교육과정 소개</a></li>
+                                <li><a href="#">교육이수 안내</a></li>
+                                <li><a href="#">교육신청</a></li>
                             </ul>
-
-                            <ul class="sub">
-                                <li class="s_menu"><a href="#">공지사항</a></li>
-                                <li class="s_menu"><a href="#">자료실</a></li>
-                                <li class="s_menu"><a href="#">FQA</a></li>
-                                <li class="s_menu"><a href="#">Q&A</a></li>
-                                <li class="s_menu"><a href="#">관련사이트</a></li>
+                            <ul>
+                                <li><a href="#">디지털배지 소개</a></li>
+                                <li><a href="#">발급절차</a></li>
+                                <li><a href="#">디지털배지 <br>진위여부 확인</a></li>
                             </ul>
-                        </div><!--sub_menu_wrap-->
-                    </div><!--sub_wrap-->
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">Q&A</a></li>
+                                <li><a href="#">자료실</a></li>
+                            </ul>
+                        </div><!--snb_bg-->
+                    </div><!--snb_area-->
+                </div>
+            </div>
 
-
-                </div><!--menu_wrapper-->
-
-                <div class="ham_menu_wrap">
-                    <div class="ham_bar"></div>
-
-
-
-
-
-            </div><!--header-->
-
-
-
+            <div class="ham_menu_wrap">
+                <div class="ham_bar">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div><!--ham_bar-->
             </div><!--ham_menu_wrap-->
+
+            <div class="mobile_menu_list">
+
+
+                <div class="mobile_menu_wrap">
+                    <div class="mobile_menu">
+                        <div class="menu_name">사업단소개</div>
+                        <div class="arrow"></div>
+                    </div>
+
+
+                    <div class="mobile_sub_wrap">사업단소개 서브</div>
+                </div><!--mobile_menu_wrap-->
+
+                <div class="mobile_menu_wrap">
+                    <div class="mobile_menu">교육과정</div>
+                    <div class="mobile_sub_wrap" title="123">교육과정 서브</div>
+                </div><!--mobile_menu_wrap-->
+
+
+            </div><!--mobile_menu_list-->
+
+
+
+
 
 
 
@@ -96,7 +117,7 @@
 
         </div><!--header_cont-->
 
-        <div class="top_cont">
+        <div class="top_cont main_side_padding">
             <div class="ban">
                 <canvas class="graph"></canvas>
             </div><!--ban-->
@@ -116,7 +137,7 @@
 
 
         <div class="center_cont">
-            <div class="center_wrap">
+            <div class="center_wrap main_side_padding">
                 <div class="curriculum_wrap">
                     <div class="curri_title">교육과정</div>
                     <div class="curri_text_wrap">
@@ -190,7 +211,7 @@
 
         </div><!--center_cont-->
 
-        <div class="bottom_cont">
+        <div class="bottom_cont main_side_padding">
             <div class="title">차세대통신사업단 소식</div>
             <div class="board_wrap">
                 <div class="notice_wrap">
@@ -303,7 +324,7 @@
             </div><!--board_wrap-->
         </div><!--bottom_cont-->
 
-        <div class="footer_area">
+        <div class="footer_area main_side_padding">
             <div class="logo_wrap">
                 <a href="https://www.kookmin.ac.kr/" target="_blank">
                     <img src="./img/footer_logo_1.png" alt="국민대학교">
@@ -358,7 +379,7 @@
     </div><!--wrap-->
 
 </body>
-
+<script type="text/javascript"></script>
 <script src="jquery-3.6.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
@@ -409,6 +430,22 @@
             });
             list[idx].classList.add('on')
         });
+    });
+
+    function over(){
+        snb = document.querySelector('.snb_area')
+        snb.className = 'snb_area navi'
+    }
+
+    function out(){
+        snb = document.querySelector('.snb_area')
+        snb.className = 'snb_area navi2'
+    }
+
+
+    const hamMenu = document.querySelector('.ham_bar');
+    hamMenu.addEventListener('click', (event) => {
+        event.currentTarget.classList.toggle('active');
     });
 </script>
 
