@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/sub_greeting.css">
     <link rel="stylesheet" href="chart.css">
     <title>차세대통신사업단 | 단장 인사말</title>
 </head>
 <body>
 
-    <div class="wrap">
+    <div class="wrap sub_greeting" id="sub_greeting">
         <div class="header_cont">
-            <div id="wrap">
+            <div id="header_wrap">
                 <div id="header" class="main_side_padding">
                     <div class="row">
                         <div id="logo">
-                            <img src="./img/header_logo.png" alt="logo">
+                            <img src="/img/header_logo.png" alt="logo">
                         </div>
                         <div id="gnb" onmouseover = "over()" onmouseout="out()">
                             <ul class="row">
@@ -66,8 +67,6 @@
             </div><!--ham_menu_wrap-->
 
             <div class="mobile_menu_list">
-
-
                 <div class="mobile_menu_wrap">
                     <div class="mobile_menu">
                         <div class="menu_name">사업단소개</div>
@@ -89,29 +88,78 @@
 
 
 
-
-
-
-
-
-
-
-
-            <div class="main_cont">
-                <div style="font-size: 28px;">미래혁신기술의 중심</div>
-                <div class=" title f_blue">차세대통신사업단</div>
-                <div class="text_center">
-                    <p>차세대통신 혁신융합대학은 대학 간의 경계를 허물고, 학과간의 벽을 넘어 <br></p>
-                    <p>전공과 관계없이 <span class="f_blue"> 소단위 전공(마이크로디그리)을 통해 인공지능, 자율주행차, 미래모빌리티</span> 등<br></p>
-                    <p><span class="f_blue">첨단 분야의 역량을 갖춘 차세대 인재 양성을 목표</span>로 합니다.</p>
-
-                </div><!--text_center-->
-            </div><!--main_cont-->
-
-
-
-
         </div><!--header_cont-->
-    </div><!--wrap-->
+
+        <div class="sub_pg_wrap">
+            <div class="sub_title">단장인사말</div>
+
+            <div class="tab_wrap">
+                tab_wrap
+            </div><!--tab_wrap-->
+
+            <div class="contents_wrap">
+                <div class="cont_title">
+                    미래 세상과 소통하는 양자보안 차세대통신
+                </div>
+
+                <div class="cont_text">
+                    안녕하십니까, 첨단분야 혁신융합대학 차세대통신사업단장 박준석입니다.
+
+
+
+                    차세대통신은 미래 기술을 선점하기 위해 세계 각국이 무한 경쟁을 펼치고 있는 분야입니다.
+
+                    우리가 살고 있는 이 시대의 통신 서비스는 네트워크를 통해 사람, 데이터, 사물 등 모든 것을 연결하는 초연결사회로의 핵심을 이루고 있습니다.
+
+                    그러나 앞으로의 통신은 기존의 산업구조를 뛰어넘어 새로운 산업생태계를 구축하며, 인류에게 혁신적인 가치를 제공할 것입니다.
+
+
+
+                    컨소시엄을 구성하는 5개 대학(국민대, 서울시립대, 울산과학대, 전남대, 한국항공대)과 지자체 광주광역시에서는
+
+                    학생들의 연구 참여 기회를 폭넓게 제공할 예정입니다. 차세대통신 기반 인공지능, 실감미디어, 자율자동차 등
+
+                    USE CASE에서 요구되는 다양한 기존 교과목과 연계되는 초급/중급/고급 과정을 설계하고 운영하며,
+
+                    USE CASE 요소기술, 융합기술, 응용기술, 설계경험 등의 체계로 다양한 마이크로디그리를 운영하고자 합니다.
+
+
+
+                    이를 통해 다양한 첨단산업분야의 현장 경험과 전문역량이 풍부한 양자보안 차세대통신융합분야 혁신인력양성에 기여하겠습니다.
+
+
+
+                    차세대통신 사업단은 학생들이 다양한 경로을 탐색하고, 다채로운 기회를 경험하며, 무한한 가능성을 발견하는, 찐 교육을 전달하고 싶습니다.
+
+                    다양한 지원 프로그램을 마련하고 운영하도록 하겠습니다.
+
+                    우리 사업단이 구현하고자 하는 인재양성 모델은 ‘양자보안 차세대통신 π형 인재’입니다. π는 무한한 숫자를 상징합니다. 사업단이 정의하는 π에는 ‘융합’, ‘적응’, ‘소통’, ‘무한한 가능성’이 포함됩니다. 교육과정을 이수한 학생들이 급변하는 미래 사회에 지연 없이 대응하는 유연한 사고력와 실행 능력을 갖추기를 바랍니다.
+
+
+
+
+
+                    차세대통신사업단은 기업의 성장과 혁신을 주도하고 우리나라의 차세대통신 분야 글로벌 경쟁력을 높히는
+
+                    차세대통신 및 첨단융합분야의 혁신인재양성에 무한한 책임과 노력을 다하겠습니다.
+                </div>
+
+            </div><!--contents_wrap-->
+
+
+
+        </div><!--sub_pg_wrap-->
+    </div><!--wrap, sub_greeting-->
 </body>
+<script>
+    function over(){
+        snb = document.querySelector('.snb_area')
+        snb.className = 'snb_area navi'
+    }
+
+    function out(){
+        snb = document.querySelector('.snb_area')
+        snb.className = 'snb_area navi2'
+    }
+</script>
 </html>

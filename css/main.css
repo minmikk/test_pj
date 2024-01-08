@@ -77,6 +77,9 @@ ul , li , a {
     /*margin-bottom: 50px;*/
 }
 
+#header_wrap {
+    width: 100%;
+}
 #header {
     max-width: 1200px;
     margin: 0 auto;
@@ -148,7 +151,7 @@ ul , li , a {
     overflow: hidden;
     background: rgba(0, 0, 0, 0.4);
     position: absolute;
-    top: 71px;
+    top: 79px;
 
     display: flex;
     flex-direction: row;

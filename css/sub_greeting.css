@@ -1,0 +1,53 @@
+* {
+
+}
+#sub_greeting {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header_wrap {
+    background-color: #071C30;
+    width: 100%;
+}
+
+
+#sub_greeting .header_cont {
+    height: 400px;
+    width: 100%;
+    background-color: #868686;
+    /*background-image: url("../img/gr_top_img_1.png");*/
+    background-repeat: no-repeat;
+    background-size: auto;
+    object-fit: cover;
+    background-position: center;
+}
+
+
+#sub_greeting .sub_pg_wrap {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sub_greeting .sub_pg_wrap .sub_title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+#sub_greeting .sub_pg_wrap .contents_wrap {
+
+}
+
+
+
+.login:hover {
+    /*color: #071C30;*/
+}
