@@ -44,6 +44,7 @@ ul , li , a {
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
 }
 
 .main_side_padding {
@@ -76,8 +77,8 @@ ul , li , a {
     /*margin-bottom: 50px;*/
 }
 
-#header{
-    width: 1200px;
+#header {
+    max-width: 1200px;
     margin: 0 auto;
     padding-top: 20px;
     display: flex;
@@ -89,29 +90,37 @@ ul , li , a {
     position: relative;
 }
 
-#logo{
-    width: 200px;
+#header >.row {
+
 }
 
-#gnb{
+#logo {
+    width: 200px;
+    margin-right: 200px;
+}
+
+#gnb {
     width: 100%;
-    /*background-color: burlywood;*/
     display: flex;
     align-items: center;
-    margin-left: 25%;
+    /*margin-left: 25%;*/
+    justify-content: flex-end;
 }
 
-#gnb > ul {
+#gnb > ul.row {
     width: 100%;
     display: flex;
     flex-direction: row;
-    /*background-color: palegoldenrod;*/
-
+    justify-content: flex-end;
 }
 
 #gnb > ul > li{
-
-    width: 100%;
+    padding: 0 5px;
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #gnb > ul > li > a{
@@ -122,25 +131,41 @@ ul , li , a {
     color: white;
 }
 
-#gnb .login {
+.login {
     font-size: 14px;
     white-space: nowrap;
+    cursor: pointer;
+}
+
+.login:hover {
+    color: #86f8ff;
 }
 
 #header > .snb_area {
     width: 100vw;
+    /*max-width: 1200px;*/
     height: 0;
     overflow: hidden;
     background: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 71px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 #header > .snb_area .snb_bg {
     display: flex;
     flex-direction: row;
-    padding-right: 15%;
+    justify-content: flex-end;
+    max-width: 1200px;
+    width: 100%;
 }
-
+#header > .snb_area .snb_bg .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
 #header > .snb_area.navi {
     animation: slider 0.5s;
     animation-fill-mode: forwards;
@@ -152,21 +177,22 @@ ul , li , a {
 
 #header > .snb_area h2 {
     width: 200px;
-    background-color: #86f8ff;
 }
 
 #header > .snb_area ul{
-    padding: 5px 30px;
+    padding-right: 55px;
 }
 #header > .snb_area ul > li{
     text-align: center;
     padding: 5px 0;
+    white-space: nowrap;
 }
 
 #header > .snb_area ul > li> a{
     margin-top: 7px;
     color: #ffffff;
     transition: all 0.2s;
+    font-size: 14px;
 }
 
 #header > .snb_area ul > li> a:hover {
@@ -189,64 +215,6 @@ ul , li , a {
 }
 
 
-
-
-
-/*기존헤더시작*/
-
-.wrap .header {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    margin: 30px auto 0 auto;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.wrap .header .bar {
-    border: 1px solid #dddddd;
-    /*width: 1px;*/
-    height: 15px;
-    margin: 0 10px;
-}
-
-.wrap .header .login {
-    color: #86f8ff;
-}
-
-.wrap .header .login:hover {
-    color: #ffffff;
-}
-
-.wrap .header .title {
-    font-size: 23px;
-    margin-left: 15px;
-}
-
-.wrap .header > div {
-    cursor: pointer;
-}
-
-.wrap .header .menu_wrapper {
-    display: flex;
-    flex-direction: row;
-    transition: ease-in-out all 0.5s;
-    position: relative;
-}
-
-.wrap .header .menu_wrapper .menu {
-    margin: 0 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: ease-in-out all 0.1s;
-}
-
-.wrap .header .menu:last-child {
-    padding: 0;
-}
-
-/*기존헤더 끝*/
 
 .wrap .main_cont {
     margin-top: 140px;
