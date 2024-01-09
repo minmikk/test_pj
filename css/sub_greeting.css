@@ -34,17 +34,37 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    color: black;
+
 }
 
 #sub_greeting .sub_pg_wrap .sub_title {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 600;
 }
 
-
-#sub_greeting .sub_pg_wrap .contents_wrap {
-
+#sub_greeting .sub_pg_wrap .tab_wrap {
+    margin: 30px 0;
+    border: 1px solid #000000;
 }
+
+
+#sub_greeting .sub_pg_wrap .contents_wrap {}
+
+
+#sub_greeting .sub_pg_wrap .contents_wrap .cont_title {
+    font-size: 24px;
+}
+
+
+#sub_greeting .sub_pg_wrap .contents_wrap .cont_text {
+    font-size: 16px;
+}
+
+
+#sub_greeting .sub_pg_wrap .contents_wrap {}
 
 
 
