@@ -3,6 +3,7 @@ body,html {
     margin: 0;
     padding: 0;
     background-color: black !important;
+    overflow-x: hidden;
 }
 
 * {
@@ -80,12 +81,9 @@ ul , li , a {
     transition: all 0.3s;
 }
 
-.top_btn > a {
-    text-shadow: 2px 1px 4px #071C30;
-}
-
 .top_btn:hover {
     bottom: 25px;
+    box-shadow: #86f8ff 0 0 6px 2px;
 }
 
 

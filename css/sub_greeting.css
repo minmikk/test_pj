@@ -142,3 +142,33 @@
 .login:hover {
     /*color: #071C30;*/
 }
+
+#tab_info {
+    width: 100%;
+    /*background-color: #868686;*/
+}
+
+
+
+
+#sub_greeting .sub_pg_wrap .tab_contents_wrap .tab_cont.tab_info .cont_title {
+    margin-bottom: 15px;
+}
+
+
+#sub_greeting .sub_pg_wrap .tab_contents_wrap .tab_cont.tab_info .img_text {
+    margin: 30px 0 30px 0;
+}
+
+#sub_greeting .sub_pg_wrap .tab_contents_wrap .tab_cont.tab_info .cont_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#tab_info .cont_img img {
+    width: 95%;
+}
+
