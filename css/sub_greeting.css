@@ -163,12 +163,13 @@
 #sub_greeting .sub_pg_wrap .tab_contents_wrap .tab_cont.tab_info .cont_img {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     margin-bottom: 20px;
 }
 
-#tab_info .cont_img img {
-    width: 95%;
+
+#sub_greeting .sub_pg_wrap .tab_contents_wrap .tab_cont.tab_info .cont_img img {
+    width: 70%;
 }
 
