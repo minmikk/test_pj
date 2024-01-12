@@ -1,0 +1,69 @@
+
+.footer_area {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    color: #595959;
+    padding: 0 50px 50px 50px;
+}
+
+.footer_area .logo_wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    height: 105px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+}
+
+.footer_area .logo_wrap > a > img {
+    width: 100%;
+}
+
+.footer_area .footer_wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer_area .footer_wrap .footer_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 20px;
+    flex: 1;
+}
+
+.footer_area .footer_wrap .footer_content .notice_wrap {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer_area .footer_wrap .footer_content .notice_wrap > div {
+    margin-right: 20px;
+    font-size: 0.8rem;
+    color: black;
+    cursor: pointer;
+}
+
+.footer_area .footer_wrap .footer_content .notice_wrap > div:hover {
+    text-decoration: underline;
+}
+
+.footer_area .footer_wrap .footer_content .address {
+    font-size: 1.2rem;
+    color: #595959;
+}
+.footer_area .footer_wrap > div > img {
+    width: 100%;
+}
+.footer_area .footer_wrap > a > img {
+    width: 100%;
+}
