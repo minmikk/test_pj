@@ -23,19 +23,21 @@
                 <a href="index.html">
                     <img src="./img/logo_wh.png" alt="logo">
                 </a>
-            </div>
-            <div id="gnb" onmouseover = "over()" onmouseout="out()">
-                <ul class="row">
-                    <li><a href="#">사업단소개</a></li>
-                    <li><a href="#">교육과정</a></li>
-                    <li><a href="#">디지털배지</a></li>
-                    <li><a href="#">커뮤니티</a></li>
-                </ul>
-            </div>
-            <div class="bar"></div>
-            <div class="login">로그인</div>
-        </div><!--row-->
+            </div><!--logo-->
 
+            <div class="menu_wrap" style="display: flex; flex-direction: row;">
+                <div id="gnb" onmouseover = "over()" onmouseout="out()">
+                    <ul class="row">
+                        <li><a href="#">사업단소개</a></li>
+                        <li><a href="#">교육과정</a></li>
+                        <li><a href="#">디지털배지</a></li>
+                        <li><a href="#">커뮤니티</a></li>
+                    </ul>
+                </div>
+                <div class="bar"></div>
+                <div class="login">로그인</div>
+            </div>
+        </div><!--row-->
 
         <div class="snb_area" onmouseover="over()" onmouseout="out()">
             <div class="snb_bg">
@@ -61,35 +63,43 @@
                 <ul></ul>
             </div><!--snb_bg-->
         </div><!--snb_area-->
+
+        <div class="ham_menu_wrap">
+            <div class="ham_menu">
+                <div class="ham_bar">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div><!--ham_bar-->
+            </div><!--ham_menu-->
+
+            <div class="mobile_menu_list">
+                <div class="mobile_menu_wrap">
+                    <div class="mobile_menu">
+                        <div class="menu_name">사업단소개</div>
+                        <div class="arrow"></div>
+                    </div>
+
+
+                    <div class="mobile_sub_wrap">사업단소개 서브</div>
+                </div><!--mobile_menu_wrap-->
+
+                <div class="mobile_menu_wrap">
+                    <div class="mobile_menu">교육과정</div>
+                    <div class="mobile_sub_wrap" title="123">교육과정 서브</div>
+                </div><!--mobile_menu_wrap-->
+
+
+            </div><!--mobile_menu_list-->
+        </div><!--ham_menu_wrap-->
+
     </header><!--header-->
 
 
 
-    <div class="ham_menu_wrap">
-        <div class="ham_bar">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div><!--ham_bar-->
-    </div><!--ham_menu_wrap-->
-    <div class="mobile_menu_list">
-        <div class="mobile_menu_wrap">
-            <div class="mobile_menu">
-                <div class="menu_name">사업단소개</div>
-                <div class="arrow"></div>
-            </div>
 
 
-            <div class="mobile_sub_wrap">사업단소개 서브</div>
-        </div><!--mobile_menu_wrap-->
 
-        <div class="mobile_menu_wrap">
-            <div class="mobile_menu">교육과정</div>
-            <div class="mobile_sub_wrap" title="123">교육과정 서브</div>
-        </div><!--mobile_menu_wrap-->
-
-
-    </div><!--mobile_menu_list-->
 
 
     <section class="banner_contents_wrap">
@@ -388,7 +398,6 @@
 
 
 </body>
-<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
 <script type="text/javascript"></script>
 <script src="./js/main.js"></script>
 <script src="jquery-3.6.1.min.js"></script>

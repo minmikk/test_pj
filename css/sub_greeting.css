@@ -48,7 +48,7 @@
 #sub_greeting .sub_pg_wrap .tab_title_wrap {}
 
 #sub_greeting .sub_pg_wrap .tab_title_wrap .tab_title {
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 600;
     display: none;
 }
@@ -83,7 +83,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 17px;
+    font-size: 1.7rem;
 }
 
 #sub_greeting .sub_pg_wrap .tab_btn_wrap .tab_btn.active {
@@ -115,13 +115,13 @@
 
 
 #sub_greeting .sub_pg_wrap .tab_contents_wrap .tab_cont .cont_title {
-    font-size: 24px;
+    font-size: 2.4rem;
     margin-bottom: 40px;
 }
 
 
 #sub_greeting .sub_pg_wrap .tab_contents_wrap .tab_cont .cont_text {
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
 }
 
@@ -156,6 +156,7 @@
 
 #sub_greeting .sub_pg_wrap .tab_contents_wrap .tab_cont.tab_info .img_text {
     margin: 30px 0 30px 0;
+    font-size: 1.6rem;
 }
 
 #sub_greeting .sub_pg_wrap .tab_contents_wrap .tab_cont.tab_info .cont_img {
