@@ -96,3 +96,13 @@
         align-items: center;
     }
 }
+
+@media (max-width: 540px) {
+    .banner_contents_wrap {
+        height: 210px;
+    }
+    .footer_area {
+        padding: 30px 20px;
+    }
+}
+

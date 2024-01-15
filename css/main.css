@@ -123,6 +123,7 @@ ul , li , a {
     width: 100%;
     height: 100%;
     max-height: 600px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -168,6 +169,7 @@ ul , li , a {
     width: 100%;
     height: 100%;
     max-height: 600px;
+    min-height: 400px;
     /* flex item의 flex-shrink는 기본값이 1이므로 컨테이너 크기에 맞게 줄어드는데,
     슬라이드를 구현할 것이므로 줄어들지 않도록 0을 준다. */
     flex-shrink: 0;
@@ -219,6 +221,7 @@ ul , li , a {
 
 .slide_item > img {
     width: 100%;
+    height: inherit;
 }
 /* 페이지네이션 스타일 */
 /*ul,*/
@@ -267,6 +270,7 @@ ul , li , a {
 
 .main_cont {
     width: 100%;
+    height: 100%;
     margin-top: 140px;
     position: absolute;
     top: 25%;
@@ -279,9 +283,14 @@ ul , li , a {
     justify-content: center;
 }
 
-.main_cont .title {
+.main_cont .main_cont_tit {
+    font-size: 3rem;
+}
+
+.main_cont .main_cont_sub_tit {
     font-size: 5.5rem;
     margin-bottom: 30px;
+    color: #86f8ff;
 }
 
 .main_cont .text_center {
@@ -819,6 +828,19 @@ ul , li , a {
 
 
 @media (max-width: 600px) {
+
+    .main_cont .main_cont_tit {
+        font-size: 2rem;
+    }
+
+    .main_cont .main_cont_sub_tit {
+        font-size: 4rem;
+        margin-bottom: 20px;
+    }
+
+    .main_cont .text_center p {
+        font-size: 1.4rem;
+    }
     .banner_contents_wrap {
         height: 300px;
     }
@@ -859,13 +881,15 @@ ul , li , a {
 
 @media (max-width: 540px) {
 
-    .center_cont .center_wrap .curriculum_wrap .curri_btn {
-        background-color: darkblue;
-        color: white;
-    }
-
     .center_cont .center_wrap .curriculum_info {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .bottom_cont .board_wrap .notice_wrap {
+        width: 100%;
+    }
+
+    .bottom_cont .board_wrap .notice_wrap:nth-child(2) {
+        display: none;
     }
 }
 
