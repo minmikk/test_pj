@@ -819,6 +819,10 @@ ul , li , a {
 
 
 @media (max-width: 600px) {
+    .banner_contents_wrap {
+        height: 300px;
+    }
+
     .top_cont {display: none;}
 
     .main_cont .title {
@@ -850,6 +854,18 @@ ul , li , a {
 
     .bottom_cont .board_wrap .notice_wrap:last-child {
         display: none;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .center_cont .center_wrap .curriculum_wrap .curri_btn {
+        background-color: darkblue;
+        color: white;
+    }
+
+    .center_cont .center_wrap .curriculum_info {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
