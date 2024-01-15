@@ -884,6 +884,9 @@ ul , li , a {
 }
 
 @media (max-width: 540px) {
+    /*.banner_contents_wrap {*/
+    /*    height: 210px;*/
+    /*}*/
 
     .center_cont .center_wrap .curriculum_info {
         grid-template-columns: repeat(2, 1fr);
