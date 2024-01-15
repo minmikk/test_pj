@@ -798,4 +798,58 @@ ul , li , a {
     }
 }
 
+@media (max-width: 760px) {
+    .main_cont {
+        margin-top: 100px;
+    }
+    .center_cont {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: fit-content;
+    }
+
+    .center_cont .center_wrap .curriculum_wrap {
+        height: 400px;
+    }
+
+    .center_cont .center_wrap .curriculum_info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .top_cont {display: none;}
+
+    .main_cont .title {
+        font-size: 3.5rem;
+    }
+    .center_cont .center_wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    .center_cont .center_wrap .curriculum_info {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 30px 0;
+    }
+    .center_cont .center_wrap .curriculum_wrap {
+        width: 100%;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+    }
+    .center_cont .center_wrap .curriculum_wrap .curri_text_wrap {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .bottom_cont .board_wrap .notice_wrap {
+        width: 48%;
+    }
+
+    .bottom_cont .board_wrap .notice_wrap:last-child {
+        display: none;
+    }
+}
 

@@ -363,3 +363,9 @@ header > .snb_area ul > li> a:hover {
         display: flex !important;
     }
 }
+
+@media (max-width: 600px) {
+    header .row {
+        width: 130px;
+    }
+}

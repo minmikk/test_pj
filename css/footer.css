@@ -67,3 +67,10 @@
 .footer_area .footer_wrap > a > img {
     width: 100%;
 }
+
+
+@media (max-width: 600px) {
+    .footer_area .logo_wrap {
+        display: none;
+    }
+}
