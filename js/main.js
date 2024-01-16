@@ -210,3 +210,7 @@ slide.addEventListener("mouseout", () => {
         nextMove();
     }, 3000);
 });
+
+//모바일메뉴
+
+

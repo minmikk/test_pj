@@ -395,10 +395,6 @@ ul , li , a {
 }
 */
 
-
-
-
-
 /*chart content end*/
 
 
@@ -481,7 +477,6 @@ ul , li , a {
 
 .center_cont .center_wrap .curriculum_wrap {}
 
-
 .center_cont .center_wrap .curriculum_info {
     width: 60%;
     display: grid;
@@ -514,7 +509,6 @@ ul , li , a {
     height: 100%;
 }
 
-
 .center_cont .center_wrap .curriculum_info .info_box:hover {
     background-color: #86f8ff;
     color: black;
@@ -528,7 +522,6 @@ ul , li , a {
     transition: ease-in-out all 0.1s;
     background-size: contain !important;
 }
-
 
 .center_cont .center_wrap .curriculum_info .info_box .icon_box .curri_icon.icon1 {
     background-image: url("../img/ShowChart.png");
@@ -678,7 +671,6 @@ ul , li , a {
     background-image: url("../img/icon_right_arrow_hover.png");
 }
 
-
 .bottom_cont .board_wrap .notice_wrap .list_wrap {
     display: flex;
     flex-direction: column;
@@ -715,7 +707,6 @@ ul , li , a {
 /*반응형*/
 
 @media (max-width: 1200px) {
-
     .main_side_padding {
         padding-right: 30px !important;
         padding-left: 30px !important;
@@ -728,77 +719,58 @@ ul , li , a {
 
 
 @media (max-width: 1024px)  {
-
     .main_side_padding {
         padding-left: 30px !important;
         padding-right: 30px !important;
     }
-
     .footer_area {
         padding: 0 10px 50px 10px;
     }
     .footer_area .logo_wrap {
         column-gap: 15px;
     }
-
     .header .menu_wrapper {
         display: none;
     }
-
     .center_cont .center_wrap .curriculum_wrap {
         width: 35%;
         margin-right: 10px;
     }
-
     .center_cont .center_wrap .curriculum_info {
         width: 65%;
     }
-
     .center_cont .center_wrap .curriculum_wrap .curri_text {
         /*font-size: 14px;*/
     }
-
     .center_cont .center_wrap .curriculum_info .info_box {
         padding: 5px 8px;
         height: 60px;
     }
-
     .center_cont .center_wrap .curriculum_info .info_box .icon_box {
         width: 40px;
     }
-
-
     .center_cont .center_wrap .curriculum_info .box_title {
         /*font-size: 14px;*/
     }
-
     .center_cont .center_wrap .curriculum_wrap .curri_text {
         width: 95%;
     }
-
     .top_cont {
         padding: 0 30px;
     }
-
     .top_cont .field_wrap .field_menu .chart {
         top: 110px;
         right: 280px;
         width: 450px;
     }
-
     .center_cont {
         height: 400px;
         padding: 50px 0;
     }
-
     .bottom_cont {
         padding-top: 50px;
         padding-bottom: 50px;
     }
-
-
-
-
 }
 
 @media (max-width: 960px) {
@@ -816,11 +788,9 @@ ul , li , a {
         padding-bottom: 30px;
         height: fit-content;
     }
-
     .center_cont .center_wrap .curriculum_wrap {
         height: 400px;
     }
-
     .center_cont .center_wrap .curriculum_info {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -828,29 +798,24 @@ ul , li , a {
 
 
 @media (max-width: 600px) {
-
     .main_cont {
         padding: 0 20px;
     }
-
     .main_cont .main_cont_tit {
         font-size: 2rem;
     }
-
     .main_cont .main_cont_sub_tit {
         font-size: 4rem;
         margin-bottom: 20px;
     }
-
     .main_cont .text_center p {
         font-size: 1.4rem;
     }
     .banner_contents_wrap {
         height: 300px;
     }
-
-    .top_cont {display: none;}
-
+    .top_cont {
+        display: none;}
     .main_cont .title {
         font-size: 3.5rem;
     }
@@ -873,11 +838,9 @@ ul , li , a {
         text-align: center;
         justify-content: center;
     }
-
     .bottom_cont .board_wrap .notice_wrap {
         width: 48%;
     }
-
     .bottom_cont .board_wrap .notice_wrap:last-child {
         display: none;
     }
@@ -887,14 +850,12 @@ ul , li , a {
     /*.banner_contents_wrap {*/
     /*    height: 210px;*/
     /*}*/
-
     .center_cont .center_wrap .curriculum_info {
         grid-template-columns: repeat(2, 1fr);
     }
     .bottom_cont .board_wrap .notice_wrap {
         width: 100%;
     }
-
     .bottom_cont .board_wrap .notice_wrap:nth-child(2) {
         display: none;
     }
