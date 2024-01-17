@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body>
+
+<header id="header" style="background: #2c3e50 !important;">
+    <div class="row">
+        <div id="logo">
+            <a href="../index.html">
+                <img src="../img/logo_wh.png" alt="logo">
+            </a>
+        </div>
+        <div id="gnb" onmouseover = "over()" onmouseout="out()">
+            <ul class="row">
+                <li><a href="#">사업단소개</a></li>
+                <li><a href="#">교육과정</a></li>
+                <li><a href="#">디지털배지</a></li>
+                <li><a href="#">커뮤니티</a></li>
+            </ul>
+        </div>
+        <div class="bar"></div>
+        <div class="login">
+            <a href="../login.html">로그인</a>
+        </div>
+    </div><!--row-->
+
+
+    <div class="snb_area" onmouseover="over()" onmouseout="out()">
+        <div class="snb_bg">
+            <ul>
+                <li><a href="about/greeting.html">단장 인사말</a></li>
+                <li><a href="#">사업 소개</a><li>
+            </ul>
+            <ul>
+                <li><a href="#">교육과정 소개</a></li>
+                <li><a href="#">교육이수 안내</a></li>
+                <li><a href="#">교육신청</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">디지털배지 소개</a></li>
+                <li><a href="#">발급절차</a></li>
+                <li><a href="#">디지털배지 <br>진위여부 확인</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">Q&A</a></li>
+                <li><a href="#">자료실</a></li>
+            </ul>
+            <ul></ul>
+        </div><!--snb_bg-->
+    </div><!--snb_area-->
+</header><!--header-->
+
+<section>
+    <div class="login-wrap">
+        <div class="login-tit">LogIn</div>
+
+        <div class="end-box">
+            <div class="id-box input-wrap">
+                <div class="tit">아이디</div>
+                <div class="box">
+                    <input type="text" placeholder="ID" class="input-box">
+                </div>
+            </div><!--id_box-->
+
+
+            <div class="pw-box input-wrap">
+                <div class="tit">비밀번호</div>
+                <div class="box">
+                    <input type="password" placeholder="Password" class="input-box">
+                </div>
+            </div><!--pw-box-->
+        </div><!--end-box-->
+        <div class="login-btn">Log in</div><!--login-btn-->
+    </div><!--login-wrap-->
+</section>
+
+<footer class="footer_area main_side_padding" style="background: rgba(44,62,80,0.06);">
+    <div class="logo_wrap">
+        <a href="https://www.kookmin.ac.kr/" target="_blank">
+            <img src="../img/footer_logo_1.png" alt="국민대학교">
+        </a>
+
+        <a href="https://www.uos.ac.kr/" target="_blank">
+            <img src="../img/footer_logo_2.png" alt="서울시립대학교">
+        </a>
+
+        <a href="https://www.uc.ac.kr/" target="_blank">
+            <img src="../img/footer_logo_3.png" alt="울산과학대학교">
+        </a>
+
+        <a href="https://www.jnu.ac.kr/" target="_blank">
+            <img src="../img/footer_logo_4.png" alt="전남대학교">
+        </a>
+
+        <a href="http://www.hangkong.ac.kr/" target="_blank">
+            <img src="../img/footer_logo_5.png" alt="한국항공대학교">
+        </a>
+
+    </div><!--logo_wrap-->
+
+    <div class="footer_wrap">
+        <div><img src="../img/logo_gy.png" alt="logo"></div>
+        <div class="footer_content">
+            <div class="notice_wrap">
+                <div>개인정보처리방침</div>
+                <div>자동이메일수집거부</div>
+            </div><!--notice_wrap-->
+
+            <div class="address">[34113] 대전광역시 유성구 가정로 201</div>
+            <div class="address">Copyright (c) 2021 COSS. All rights reserved</div>
+
+        </div><!--footer_content-->
+
+        <a href="https://www.moe.go.kr/" target="_blank">
+            <img src="../img/footer_logo_6.png" alt="교육부">
+        </a>
+        <a href="https://www.nrf.re.kr/" target="_blank">
+            <img src="../img/footer_logo_7.png" alt="한국연구재단">
+        </a>
+
+    </div><!--footer_wrap-->
+</footer><!--footer_area-->
+
+</body>
+
+<style>
+
+    body,html {
+        background: #ffffff !important;
+        color: black;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    section {
+        width: 100%;
+        /*height: 100%;*/
+        min-height: 550px;
+        display: flex;
+        flex-direction: row;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important;
+        margin-top: 100px;
+    }
+
+
+    .login-wrap {
+        width: 350px;
+        height: 400px;
+        padding: 40px;
+        /*border-radius: 10px;*/
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        box-shadow: 0 1px 6px 0 rgba(0,0,0,.2);
+        border: 1px solid rgba(0,0,0,.1);
+        row-gap: 10px;
+    }
+    .login-tit {
+        width: 100%;
+        font-size: 3rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+.login-wrap .end-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.input-wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center ;
+        font-size: 1.4rem;
+    margin-top: 20px;
+    }
+
+.input-wrap .tit {
+        font-size: 1.5rem;
+        /*margin-right: 20px;*/
+        margin: 5px 0;
+    }
+.input-wrap .box {
+        width: 100%;
+    }
+
+    .login-wrap .input-wrap .box .input-box {
+        width: 100%;
+        height: 40px;
+        padding: 0 10px;
+        color: #000000;
+        border: 1px solid #dddddd;
+    }
+
+    .login-wrap .input-wrap .box .input-box::placeholder {
+        color: #868686;
+    }
+
+    .login-wrap .login-btn {
+        padding: 10px 30px;
+        border-radius: 20px;
+        border: 1px solid #2c3e50;
+        background: #2c3e50;
+        color: #ffffff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: ease-in-out 0.2s;
+        font-weight: 600;
+    }
+
+    .login-wrap .login-btn:hover {
+        border: 1px solid #2c3e50;
+        background: #ffffff;
+        color: #2c3e50;
+    }
+
+    /*footer {*/
+    /*    max-height: 150px;*/
+    /*    padding-bottom: 0;*/
+    /*}*/
+
+
+</style>
+
+<script>
+    function out(){
+        snb = document.querySelector('.snb_area')
+        snb.className = 'snb_area navi2'
+    }
+</script>
+</html>

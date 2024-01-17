@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/common.css">
     <title>차세대통신사업단</title>
 
 </head>
@@ -35,7 +36,9 @@
                     </ul>
                 </div>
                 <div class="bar"></div>
-                <div class="login">로그인</div>
+                <div class="login">
+                    <a href="./login.html">로그인</a>
+                </div>
             </div>
         </div><!--row-->
 
@@ -500,21 +503,6 @@
         event.currentTarget.classList.toggle('active');
     });
 
-    function click_menu(element) {
-        var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
-        if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
-            before.nextElementSibling.style.maxHeight = null;   // 기존에 펼쳐진 내용 접고
-            before.classList.remove("active");                  // 버튼 비활성화
-        }
-        element.classList.toggle("active");         // 활성화 여부 toggle
-
-        var mobile_sub_wrap = element.nextElementSibling;
-        if (mobile_sub_wrap.style.maxHeight != 0) {         // 버튼 다음 요소가 펼쳐져 있으면
-            mobile_sub_wrap.style.maxHeight = null;         // 접기
-        } else {
-            mobile_sub_wrap.style.maxHeight = mobile_sub_wrap.scrollHeight + "px";  // 접혀있는 경우 펼치기
-        }
-    }
 
 
     const navbarBurger = document.querySelector('.navbar_burger');
@@ -537,10 +525,21 @@
         navbarOverlay.classList.remove('active');
     });
 
-
-
-
-
+    // function click_menu(element) {
+    //     var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
+    //     if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
+    //         before.nextElementSibling.style.maxHeight = null;   // 기존에 펼쳐진 내용 접고
+    //         before.classList.remove("active");                  // 버튼 비활성화
+    //     }
+    //     element.classList.toggle("active");         // 활성화 여부 toggle
+    //
+    //     var mobile_sub_wrap = element.nextElementSibling;
+    //     if (mobile_sub_wrap.style.maxHeight != 0) {         // 버튼 다음 요소가 펼쳐져 있으면
+    //         mobile_sub_wrap.style.maxHeight = null;         // 접기
+    //     } else {
+    //         mobile_sub_wrap.style.maxHeight = mobile_sub_wrap.scrollHeight + "px";  // 접혀있는 경우 펼치기
+    //     }
+    // }
 
 
 </script>
