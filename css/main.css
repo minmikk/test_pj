@@ -1,4 +1,10 @@
 
+/*메인 인덱스에만 적용 될 컬러*/
+body,html {
+    background-color: black !important;
+    color: white;
+}
+
 /*banner start*/
 
 .banner_contents_wrap {
@@ -605,15 +611,6 @@
         padding-left: 30px !important;
         padding-right: 30px !important;
     }
-    .footer_area {
-        padding: 0 10px 50px 10px;
-    }
-    .footer_area .logo_wrap {
-        column-gap: 15px;
-    }
-    /*.header .menu_wrapper {*/
-    /*    display: none;*/
-    /*}*/
     .center_cont .center_wrap .curriculum_wrap {
         width: 35%;
         margin-right: 10px;

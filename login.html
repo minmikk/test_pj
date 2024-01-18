@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/header.css">
@@ -9,38 +10,40 @@
 </head>
 <body>
 
-<header id="header" style="background: #2c3e50 !important;">
+<header id="header"  style="background: #2c3e50 !important;">
     <div class="row">
         <div id="logo">
-            <a href="../index.html">
-                <img src="../img/logo_wh.png" alt="logo">
+            <a href="index.html">
+                <img src="./img/logo_wh.png" alt="logo">
             </a>
-        </div>
-        <div id="gnb" onmouseover = "over()" onmouseout="out()">
-            <ul class="row">
-                <li><a href="#">사업단소개</a></li>
-                <li><a href="#">교육과정</a></li>
-                <li><a href="#">디지털배지</a></li>
-                <li><a href="#">커뮤니티</a></li>
-            </ul>
-        </div>
-        <div class="bar"></div>
-        <div class="login">
-            <a href="../login.html">로그인</a>
+        </div><!--logo-->
+
+        <div class="menu_wrap">
+            <div id="gnb" onmouseover = "over()" onmouseout="out()">
+                <ul class="row">
+                    <li><a href="#">사업단소개</a></li>
+                    <li><a href="#">교육과정</a></li>
+                    <li><a href="#">디지털배지</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                </ul>
+            </div>
+            <div class="bar"></div>
+            <div class="login">
+                <a href="./login.html">로그인</a>
+            </div>
         </div>
     </div><!--row-->
-
 
     <div class="snb_area" onmouseover="over()" onmouseout="out()">
         <div class="snb_bg">
             <ul>
-                <li><a href="about/greeting.html">단장 인사말</a></li>
-                <li><a href="#">사업 소개</a><li>
+                <li><a href="./about/greeting.html">단장 인사말</a></li>
+                <li><a href="./about/introduction.html">사업 소개</a><li>
             </ul>
             <ul>
-                <li><a href="#">교육과정 소개</a></li>
-                <li><a href="#">교육이수 안내</a></li>
-                <li><a href="#">교육신청</a></li>
+                <li><a href="./about/curri_info.html">교육과정 소개</a></li>
+                <li><a href="./about/curri_info.html">교육이수 안내</a></li>
+                <li><a href="./about/curri_register.html">교육신청</a></li>
             </ul>
             <ul>
                 <li><a href="#">디지털배지 소개</a></li>
@@ -55,8 +58,68 @@
             <ul></ul>
         </div><!--snb_bg-->
     </div><!--snb_area-->
-</header><!--header-->
 
+    <div class="navbar_overlay"></div>
+
+    <div class="ham_menu_wrap navbar_burger">
+        <div class="ham_menu">
+            <div class="ham_bar">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div><!--ham_bar-->
+        </div><!--ham_menu-->
+    </div><!--ham_menu_wrap-->
+    <div class="mobile_menu_list navbar_menu">
+        <div class="mobile_menu_wrap">
+
+            <div class="mobile_menu" onclick="click_menu(this);">
+                <div class="menu_name">사업단소개</div>
+            </div><!--mobile_menu-->
+            <div class="mobile_sub_wrap">
+                <div>단장인사말</div>
+                <div>사업소개</div>
+            </div><!--mobile_sub_wrap-->
+
+            <div class="mobile_menu" onclick="click_menu(this);">
+                <div class="menu_name">교육과정</div>
+            </div><!--mobile_menu-->
+            <div class="mobile_sub_wrap">
+                <div>교육과정 소개</div>
+                <div>교육이수 안내</div>
+                <div>교육신청</div>
+            </div><!--mobile_sub_wrap-->
+
+            <div class="mobile_menu" onclick="click_menu(this);">
+                <div class="menu_name">디지털배지</div>
+            </div><!--mobile_menu-->
+            <div class="mobile_sub_wrap">
+                <div>디지털배지 소개</div>
+                <div>발급절차</div>
+                <div>디지털배지 <br>진위여부 확인</div>
+            </div><!--mobile_sub_wrap-->
+
+            <div class="mobile_menu" onclick="click_menu(this);">
+                <div class="menu_name">커뮤니티</div>
+            </div><!--mobile_menu-->
+            <div class="mobile_sub_wrap">
+                <div>공지사항</div>
+                <div>Q&A</div>
+                <div>자료실</div>
+            </div><!--mobile_sub_wrap-->
+
+
+
+
+
+        </div><!--mobile_menu_wrap-->
+
+
+
+
+    </div><!--mobile_menu_list-->
+
+</header><!--header-->
 <section>
     <div class="login-wrap">
         <div class="login-tit">LogIn</div>
@@ -81,50 +144,50 @@
     </div><!--login-wrap-->
 </section>
 
-<footer class="footer_area main_side_padding" style="background: rgba(44,62,80,0.06);">
+<footer class="footer_area main_side_padding">
     <div class="logo_wrap">
         <a href="https://www.kookmin.ac.kr/" target="_blank">
-            <img src="../img/footer_logo_1.png" alt="국민대학교">
+            <img src="./img/footer_logo_1.png" alt="국민대학교">
         </a>
-
         <a href="https://www.uos.ac.kr/" target="_blank">
-            <img src="../img/footer_logo_2.png" alt="서울시립대학교">
+            <img src="./img/footer_logo_2.png" alt="서울시립대학교">
         </a>
-
         <a href="https://www.uc.ac.kr/" target="_blank">
-            <img src="../img/footer_logo_3.png" alt="울산과학대학교">
+            <img src="./img/footer_logo_3.png" alt="울산과학대학교">
         </a>
-
         <a href="https://www.jnu.ac.kr/" target="_blank">
-            <img src="../img/footer_logo_4.png" alt="전남대학교">
+            <img src="./img/footer_logo_4.png" alt="전남대학교">
         </a>
-
         <a href="http://www.hangkong.ac.kr/" target="_blank">
-            <img src="../img/footer_logo_5.png" alt="한국항공대학교">
+            <img src="./img/footer_logo_5.png" alt="한국항공대학교">
         </a>
-
     </div><!--logo_wrap-->
 
+
     <div class="footer_wrap">
-        <div><img src="../img/logo_gy.png" alt="logo"></div>
-        <div class="footer_content">
-            <div class="notice_wrap">
-                <div>개인정보처리방침</div>
-                <div>자동이메일수집거부</div>
-            </div><!--notice_wrap-->
+        <div class="row">
+            <div>
+                <img src="./img/logo_gy.png" alt="logo">
+            </div>
+            <div class="footer_content">
+                <div class="notice_wrap">
+                    <div class="notice_title">개인정보처리방침</div>
+                    <div class="notice_title">자동이메일수집거부</div>
+                </div><!--notice_wrap-->
 
-            <div class="address">[34113] 대전광역시 유성구 가정로 201</div>
-            <div class="address">Copyright (c) 2021 COSS. All rights reserved</div>
+                <div class="address">[34113] 대전광역시 유성구 가정로 201</div>
+                <div class="address">Copyright (c) 2021 COSS. All rights reserved</div>
+            </div><!--footer_content-->
+        </div>
 
-        </div><!--footer_content-->
-
-        <a href="https://www.moe.go.kr/" target="_blank">
-            <img src="../img/footer_logo_6.png" alt="교육부">
-        </a>
-        <a href="https://www.nrf.re.kr/" target="_blank">
-            <img src="../img/footer_logo_7.png" alt="한국연구재단">
-        </a>
-
+        <div class="footer_bottom_logo_wrap">
+            <a href="https://www.moe.go.kr/" target="_blank">
+                <img src="./img/footer_logo_6.png" alt="교육부">
+            </a>
+            <a href="https://www.nrf.re.kr/" target="_blank">
+                <img src="./img/footer_logo_7.png" alt="한국연구재단">
+            </a>
+        </div>
     </div><!--footer_wrap-->
 </footer><!--footer_area-->
 

@@ -82,6 +82,16 @@ footer {
     align-items: center;
 }
 
+@media (max-width: 1024px)  {
+    .footer_area {
+        padding: 0 10px 50px 10px;
+    }
+    .footer_area .logo_wrap {
+        column-gap: 15px;
+    }
+}
+
+
 @media (max-width: 600px) {
     .footer_area {
         padding: 30px;
