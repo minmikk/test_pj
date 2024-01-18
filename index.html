@@ -67,65 +67,50 @@
             </div><!--snb_bg-->
         </div><!--snb_area-->
 
-        <div class="navbar_overlay"></div>
+        <div class="mobile-wrap">
+            <input type="checkbox" id="check_box"/>
+            <label for="check_box" class="ham_menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
 
-        <div class="ham_menu_wrap navbar_burger">
-            <div class="ham_menu">
-                <div class="ham_bar">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div><!--ham_bar-->
-            </div><!--ham_menu-->
-        </div><!--ham_menu_wrap-->
-        <div class="mobile_menu_list navbar_menu">
-            <div class="mobile_menu_wrap">
 
+            <div class="mobile_menu_wrap side_menu">
                 <div class="mobile_menu" onclick="click_menu(this);">
-                    <div class="menu_name">사업단소개</div>
+                    사업단소개
                 </div><!--mobile_menu-->
                 <div class="mobile_sub_wrap">
                     <div>단장인사말</div>
                     <div>사업소개</div>
                 </div><!--mobile_sub_wrap-->
-
                 <div class="mobile_menu" onclick="click_menu(this);">
-                    <div class="menu_name">교육과정</div>
+                    교육과정
                 </div><!--mobile_menu-->
                 <div class="mobile_sub_wrap">
                     <div>교육과정 소개</div>
                     <div>교육이수 안내</div>
                     <div>교육신청</div>
                 </div><!--mobile_sub_wrap-->
-
                 <div class="mobile_menu" onclick="click_menu(this);">
-                    <div class="menu_name">디지털배지</div>
+                    디지털배지
                 </div><!--mobile_menu-->
                 <div class="mobile_sub_wrap">
                     <div>디지털배지 소개</div>
                     <div>발급절차</div>
                     <div>디지털배지 <br>진위여부 확인</div>
                 </div><!--mobile_sub_wrap-->
-
                 <div class="mobile_menu" onclick="click_menu(this);">
-                    <div class="menu_name">커뮤니티</div>
+                    커뮤니티
                 </div><!--mobile_menu-->
                 <div class="mobile_sub_wrap">
                     <div>공지사항</div>
                     <div>Q&A</div>
                     <div>자료실</div>
                 </div><!--mobile_sub_wrap-->
-
-
-
-
-
             </div><!--mobile_menu_wrap-->
 
-
-
-
-        </div><!--mobile_menu_list-->
+        </div><!--mobile-wrap-->
 
     </header><!--header-->
 
@@ -712,33 +697,33 @@
         snb.className = 'snb_area navi2'
     }
 
-
-    const hamMenu = document.querySelector('.ham_bar');
-    hamMenu.addEventListener('click', (event) => {
-        event.currentTarget.classList.toggle('active');
-    });
-
-
-
-    const navbarBurger = document.querySelector('.navbar_burger');
-    const navbarburgerback = document.querySelector('.navbar_burger_back');
-    const navbarMenu = document.querySelector('.navbar_menu');
-    const navbarOverlay = document.querySelector('.navbar_overlay');
-
-    navbarBurger.addEventListener('click', () => {
-        navbarMenu.classList.toggle('active');
-        navbarOverlay.classList.toggle('active');
-    });
-
-    navbarburgerback.addEventListener('click', () => {
-        navbarMenu.classList.remove('active');
-        navbarOverlay.classList.remove('active');
-    });
-
-    navbarOverlay.addEventListener('click', () => {
-        navbarMenu.classList.remove('active');
-        navbarOverlay.classList.remove('active');
-    });
+    //
+    // const hamMenu = document.querySelector('.ham_bar');
+    // hamMenu.addEventListener('click', (event) => {
+    //     event.currentTarget.classList.toggle('active');
+    // });
+    //
+    //
+    //
+    // const navbarBurger = document.querySelector('.navbar_burger');
+    // const navbarburgerback = document.querySelector('.navbar_burger_back');
+    // const navbarMenu = document.querySelector('.navbar_menu');
+    // const navbarOverlay = document.querySelector('.navbar_overlay');
+    //
+    // navbarBurger.addEventListener('click', () => {
+    //     navbarMenu.classList.toggle('active');
+    //     navbarOverlay.classList.toggle('active');
+    // });
+    //
+    // navbarburgerback.addEventListener('click', () => {
+    //     navbarMenu.classList.remove('active');
+    //     navbarOverlay.classList.remove('active');
+    // });
+    //
+    // navbarOverlay.addEventListener('click', () => {
+    //     navbarMenu.classList.remove('active');
+    //     navbarOverlay.classList.remove('active');
+    // });
 
     function click_menu(element) {
         var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼

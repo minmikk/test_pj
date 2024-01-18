@@ -234,187 +234,137 @@ header > .snb_area ul > li> a:hover {
 
 
 
-
-
-
-
-/*ham menu menu start*/
-
-.ham_menu_wrap {
-    width: 100%;
-    display: none !important;
-    /*display: flex;*/
-    justify-content: flex-end;
-    align-items: center;
-    box-sizing: border-box;
-    /*position: fixed;*/
-}
-
-.ham_menu .ham_bar {
-    width: 40px;
-    height: 40px;
+.mobile-wrap {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
-    box-sizing: border-box;
-    transition: all 0.3s;
-    position: relative;
-
-    cursor: pointer;
-    z-index: 20;
-}
-
-.ham_menu .ham_bar:hover {
-    /*background-color: #868686;*/
-}
-
-.ham_menu .ham_bar span {
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 35px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s;
-}
-
-.ham_menu .ham_bar span:nth-child(1) {
-    top: 10px;
-}
-
-.ham_menu .ham_bar span:nth-child(2) {
-    top: 20px;
-}
-
-.ham_menu .ham_bar span:nth-child(3) {
-    top: 30px;
-}
-
-.ham_menu .ham_bar.active span:nth-child(1) {
-    transform: translateY(10px) rotate(-45deg);
-}
-.ham_menu .ham_bar.active span:nth-child(2) {
-    opacity: 0;
-}
-.ham_menu .ham_bar.active span:nth-child(3) {
-    transform: translateY(-10px) rotate(45deg);
-}
-
-/*ham menu menu end*/
-
-
-
-/*mobile_menu_start*/
-.navbar_overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 1);
-    z-index: 998;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.1s ease;
-}
-
-
-
-.mobile_menu_list {
-    position: absolute;
-    top: 0;
-    right: 1px;
-    background-color: rgba(0, 0, 0, 0.9);
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    /*align-items: flex-start;*/
-    height: 100vh;
-    z-index: 10;
-    padding: 100px 0 0 0;
-
     display: none;
-
-    transition: transform 0.3s ease;
-    transform: translateX(100%);
 }
 
-.mobile_menu_list.active {
-    transform: translateX(0);
+
+#check_box {
+    display: none;
+    right:1px;
 }
 
-/*.navbar_overlay.active {*/
-/*    opacity: 1;*/
-/*    pointer-events: auto;*/
-/*}*/
+#check_box + label {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 2;
+}
 
+#check_box + label > span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #ffffff;
+    border-radius: 5px;
+    transition: all 300ms;
+    border: none;
+}
 
-.mobile_menu_list .mobile_menu_wrap {
+#check_box:checked + label > span:nth-child(1) {
+    top: 50%;
+    transform: translate(0, -50%);
+    transform: rotate(45deg);
+}
+
+#check_box + label > span:nth-child(2) {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#check_box:checked + label > span:nth-child(2) {
+    opacity: 0;
+}
+
+#check_box + label > span:nth-child(3) {
+    bottom: 0;
+}
+
+#check_box:checked + label > span:nth-child(3) {
+    top: 50%;
+    transform: translate(0, -50%);
+    transform: rotate(-45deg);
+}
+
+.side_menu {
+    position: fixed;
+    width: 60vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    right: -100vw;
+    transition: all 300ms;
+    z-index: 1;
+    top: 0px;
+    padding: 60px 20px 0 20px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
+    row-gap: 10px;
 }
 
-.mobile_menu_list .mobile_menu_wrap > div {
-    padding: 10px 0;
+
+#check_box:checked + label + .side_menu {
+    right: 0;
 }
 
-.mobile_menu_list .mobile_menu_wrap .mobile_menu {
+
+
+.side_menu .mobile_menu {
     color: white;
     cursor: pointer;
-    padding: 18px;
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 1.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    transition: ease-in-out 0.1s;
+    font-size: 1.4rem;
+    margin-right: 20px !important;
+
+
 }
 
-.mobile_menu_list .mobile_menu:after{
+.mobile_menu:after{
     content: '\002B';
     color: white;
     font-weight: bold;
-    float: right;
     margin-left: 5px;
 }
 .mobile_menu.active:after {
     content: "\2212";
 }
 
-
-.mobile_menu_list .mobile_menu_wrap .mobile_menu .menu_name {}
-.mobile_menu_list .mobile_menu_wrap .mobile_menu .menu_name:hover {
+.mobile_menu:hover {
     color: #86f8ff;
 }
 
-.mobile_menu_list .mobile_menu_wrap .mobile_menu .arrow {}
-
-.mobile_menu_list .mobile_menu_wrap .mobile_sub_wrap {
-    padding: 0 30px;
+.mobile_sub_wrap {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     font-size: 1.4rem;
     width: 100%;
-    background-color: rgba(0, 0, 0, 1);
 }
 
-.mobile_menu_list .mobile_menu_wrap .mobile_sub_wrap > div {
-    padding: 10px;
+.mobile_sub_wrap > div {
+    padding: 10px 0 10px 20px;
     cursor: pointer;
+    color: #ffffff;
 }
 
-.mobile_menu_list .mobile_menu_wrap .mobile_sub_wrap > div:hover {
+.mobile_sub_wrap > div:hover {
     color: #86f8ff;
 }
 
-
-/*mobile_menu_end*/
 
 
 
@@ -446,7 +396,7 @@ header > .snb_area ul > li> a:hover {
         display: none !important;
     }
 
-    .ham_menu_wrap {
+    .mobile-wrap {
         display: flex !important;
     }
 }
@@ -462,3 +412,74 @@ header > .snb_area ul > li> a:hover {
     }
 }
 
+
+
+#check_box {
+    display: none;
+    right:1px;
+}
+
+#check_box + label {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 2;
+
+}
+
+#check_box + label > span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    transition: all 300ms;
+}
+
+#check_box:checked + label > span:nth-child(1) {
+    top: 50%;
+    transform: translate(0, -50%);
+    transform: rotate(45deg);
+}
+
+#check_box + label > span:nth-child(2) {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#check_box:checked + label > span:nth-child(2) {
+    opacity: 0;
+}
+
+#check_box + label > span:nth-child(3) {
+    bottom: 0;
+}
+
+#check_box:checked + label > span:nth-child(3) {
+    top: 50%;
+    transform: translate(0, -50%);
+    transform: rotate(-45deg);
+}
+
+#side_menu {
+    position: fixed;
+    width: 60vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    right: -100vw;
+    transition: all 300ms;
+    z-index: 1;
+    top: 0px;
+    padding: 120px 20px 20px 20px;
+    box-sizing: border-box;
+}
+
+#side_menu > ul > li > a {
+    color: #ffffff;
+}
+
+#check_box:checked + label + #side_menu {
+    right: 0;
+}
