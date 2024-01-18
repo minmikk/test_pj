@@ -1,10 +1,15 @@
 
-.footer_area {
+
+footer {
     height: 100%;
+    width: 100%;
+    max-height: 200px !important;
+}
+.footer_area {
     width: 100%;
     background-color: #ffffff;
     color: #595959;
-    padding: 0 50px 50px 50px;
+    padding: 0 50px 30px 50px;
 }
 
 .footer_area .logo_wrap {

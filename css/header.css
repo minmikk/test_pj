@@ -121,8 +121,8 @@ header > .snb_area .snb_bg {
     justify-content: flex-end;
     max-width: 1200px;
     width: 100%;
-
     padding-top: 30px;
+    transition: ease-in-out 0.2s;
 }
 header > .snb_area .snb_bg .row {
     display: flex;
@@ -131,7 +131,7 @@ header > .snb_area .snb_bg .row {
 }
 header > .snb_area.navi {
     animation: slider 0.5s;
-    animation-fill-mode: forwards;
+    /*animation-fill-mode: forwards;*/
 }
 
 header > .snb_area.navi2 {
@@ -430,6 +430,10 @@ header > .snb_area ul > li> a:hover {
 
 
 @media (max-width: 960px)  {
+
+    html, body {
+        /*overflow-x: hidden;*/
+    }
     .menu_wrap {
         display: none !important;
     }
