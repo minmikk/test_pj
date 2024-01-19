@@ -644,11 +644,10 @@ body,html {
     }
     .center_cont {
         height: 400px;
-        padding: 50px 0;
+        padding: 50px 30px !important;
     }
     .bottom_cont {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding: 50px 30px !important;
     }
 }
 
