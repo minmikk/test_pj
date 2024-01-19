@@ -659,6 +659,10 @@ body,html {
 }
 
 @media (max-width: 760px) {
+
+    body,html {
+        font-size: 8px;
+    }
     .main_cont {
         margin-top: 100px;
     }
@@ -677,6 +681,9 @@ body,html {
 
 
 @media (max-width: 600px) {
+    body,html {
+        font-size: 7px;
+    }
     .main_cont {
         padding: 0 20px;
     }
@@ -684,17 +691,18 @@ body,html {
         font-size: 2rem;
     }
     .main_cont .main_cont_sub_tit {
-        font-size: 4rem;
+        font-size: 3rem;
         margin-bottom: 20px;
     }
     .main_cont .text_center p {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
     .banner_contents_wrap {
         height: 300px;
     }
     .top_cont {
-        display: none;}
+        display: none;
+    }
     .main_cont .title {
         font-size: 3.5rem;
     }
@@ -702,11 +710,16 @@ body,html {
         display: flex;
         flex-direction: column;
     }
+
+    .center_cont .center_wrap .curriculum_wrap .curri_title {
+        font-size: 3rem;
+    }
     .center_cont .center_wrap .curriculum_info {
         width: 100%;
         grid-template-columns: repeat(3, 1fr);
         margin: 30px 0;
     }
+
     .center_cont .center_wrap .curriculum_wrap {
         width: 100%;
         height: 200px;
@@ -717,6 +730,10 @@ body,html {
         text-align: center;
         justify-content: center;
     }
+
+    .center_cont .center_wrap .curriculum_wrap .curri_text p {
+        font-size: 1.3rem;
+    }
     .bottom_cont .board_wrap .notice_wrap {
         width: 48%;
     }
@@ -726,6 +743,9 @@ body,html {
 }
 
 @media (max-width: 540px) {
+    body,html {
+        font-size: 6px;
+    }
     /*.banner_contents_wrap {*/
     /*    height: 210px;*/
     /*}*/

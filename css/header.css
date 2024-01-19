@@ -266,67 +266,6 @@ header > .snb_area ul > li> a:hover {
     transition: all 300ms;
 }
 
-#check_box:checked + label > span:nth-child(1) {
-    top: 50%;
-    transform: translate(0, -50%);
-    transform: rotate(45deg);
-}
-
-#check_box + label > span:nth-child(2) {
-    top: 50%;
-    transform: translate(0, -50%);
-}
-
-#check_box:checked + label > span:nth-child(2) {
-    opacity: 0;
-}
-
-#check_box + label > span:nth-child(3) {
-    bottom: 0;
-}
-
-#check_box:checked + label > span:nth-child(3) {
-    top: 50%;
-    transform: translate(0, -50%);
-    transform: rotate(-45deg);
-}
-
-#side_menu {
-    position: fixed;
-    width: 60vw;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    right: -100vw;
-    transition: all 300ms;
-    z-index: 1;
-    top: 0px;
-    padding: 120px 20px 20px 20px;
-    box-sizing: border-box;
-}
-
-#side_menu > ul > li > a {
-    color: #ffffff;
-}
-
-#check_box:checked + label + #side_menu {
-    right: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #check_box:checked + label > span:nth-child(1) {
     top: 50%;
@@ -373,6 +312,19 @@ header > .snb_area ul > li> a:hover {
 
 #check_box:checked + label + .side_menu {
     right: 0;
+}
+
+.side_menu .m-login {
+    margin-bottom: 20px;
+}
+
+.side_menu .m-login a {
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.side_menu .m-login a:hover {
+    color: #86f8ff;
 }
 
 

@@ -10,11 +10,11 @@
 </head>
 <body>
 
-<header id="header"  style="background: #2c3e50 !important;">
+<header id="header" style="background: #2c3e50 !important;">
     <div class="row">
         <div id="logo">
-            <a href="index.html">
-                <img src="./img/logo_wh.png" alt="logo">
+            <a href="../index.html">
+                <img src="../img/logo_wh.png" alt="logo">
             </a>
         </div><!--logo-->
 
@@ -29,10 +29,11 @@
             </div>
             <div class="bar"></div>
             <div class="login">
-                <a href="./login.html">로그인</a>
+                <a href="login.html">로그인</a>
             </div>
-        </div>
+        </div><!--menu_wrap-->
     </div><!--row-->
+
 
     <div class="snb_area" onmouseover="over()" onmouseout="out()">
         <div class="snb_bg">
@@ -40,9 +41,8 @@
                 <li><a href="./about/greeting.html">단장 인사말</a></li>
                 <li><a href="./about/introduction.html">사업 소개</a><li>
             </ul>
-            <ul>
-                <li><a href="./about/curri_info.html">교육과정 소개</a></li>
-                <li><a href="./about/curri_info.html">교육이수 안내</a></li>
+            <ul><li><a href="./about/curri_info.html">교육과정 소개</a></li>
+                <li><a href="./about/curri_register.html">교육이수 안내</a></li>
                 <li><a href="./about/curri_register.html">교육신청</a></li>
             </ul>
             <ul>
@@ -59,66 +59,52 @@
         </div><!--snb_bg-->
     </div><!--snb_area-->
 
-    <div class="navbar_overlay"></div>
+    <div class="mobile-wrap">
+        <input type="checkbox" id="check_box"/>
+        <label for="check_box" class="ham_menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
 
-    <div class="ham_menu_wrap navbar_burger">
-        <div class="ham_menu">
-            <div class="ham_bar">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div><!--ham_bar-->
-        </div><!--ham_menu-->
-    </div><!--ham_menu_wrap-->
-    <div class="mobile_menu_list navbar_menu">
-        <div class="mobile_menu_wrap">
 
+        <div class="side_menu">
+            <div class="m-login">
+                <a href="./login.html">로그인</a>
+            </div><!--m-login-->
             <div class="mobile_menu" onclick="click_menu(this);">
-                <div class="menu_name">사업단소개</div>
+                사업단소개
             </div><!--mobile_menu-->
             <div class="mobile_sub_wrap">
-                <div>단장인사말</div>
-                <div>사업소개</div>
+                <div><a href="./about/greeting.html">단장인사말</a></div>
+                <div><a href="./about/introduction.html">사업소개</a></div>
             </div><!--mobile_sub_wrap-->
-
             <div class="mobile_menu" onclick="click_menu(this);">
-                <div class="menu_name">교육과정</div>
+                교육과정
             </div><!--mobile_menu-->
             <div class="mobile_sub_wrap">
                 <div>교육과정 소개</div>
                 <div>교육이수 안내</div>
                 <div>교육신청</div>
             </div><!--mobile_sub_wrap-->
-
             <div class="mobile_menu" onclick="click_menu(this);">
-                <div class="menu_name">디지털배지</div>
+                디지털배지
             </div><!--mobile_menu-->
             <div class="mobile_sub_wrap">
                 <div>디지털배지 소개</div>
                 <div>발급절차</div>
                 <div>디지털배지 <br>진위여부 확인</div>
             </div><!--mobile_sub_wrap-->
-
             <div class="mobile_menu" onclick="click_menu(this);">
-                <div class="menu_name">커뮤니티</div>
+                커뮤니티
             </div><!--mobile_menu-->
             <div class="mobile_sub_wrap">
                 <div>공지사항</div>
                 <div>Q&A</div>
                 <div>자료실</div>
             </div><!--mobile_sub_wrap-->
-
-
-
-
-
         </div><!--mobile_menu_wrap-->
-
-
-
-
-    </div><!--mobile_menu_list-->
-
+    </div><!--mobile-wrap-->
 </header><!--header-->
 <section>
     <div class="login-wrap">
@@ -314,6 +300,22 @@
     function out(){
         snb = document.querySelector('.snb_area')
         snb.className = 'snb_area navi2'
+    }
+
+    function click_menu(element) {
+        var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
+        if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
+            before.nextElementSibling.style.maxHeight = null;   // 기존에 펼쳐진 내용 접고
+            before.classList.remove("active");                  // 버튼 비활성화
+        }
+        element.classList.toggle("active");         // 활성화 여부 toggle
+
+        var mobile_sub_wrap = element.nextElementSibling;
+        if (mobile_sub_wrap.style.maxHeight != 0) {         // 버튼 다음 요소가 펼쳐져 있으면
+            mobile_sub_wrap.style.maxHeight = null;         // 접기
+        } else {
+            mobile_sub_wrap.style.maxHeight = mobile_sub_wrap.scrollHeight + "px";  // 접혀있는 경우 펼치기
+        }
     }
 </script>
 </html>
