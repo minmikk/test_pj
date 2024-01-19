@@ -24,45 +24,90 @@
             <a href="../index.html">
                 <img src="../img/logo_wh.png" alt="logo">
             </a>
-        </div>
-        <div id="gnb" onmouseover = "over()" onmouseout="out()">
-            <ul class="row">
-                <li><a href="#">사업단소개</a></li>
-                <li><a href="#">교육과정</a></li>
-                <li><a href="#">디지털배지</a></li>
-                <li><a href="#">커뮤니티</a></li>
-            </ul>
-        </div>
-        <div class="bar"></div>
-        <div class="login">
-            <a href="../login.html">로그인</a>
-        </div>
+        </div><!--logo-->
+        <div class="menu_wrap">
+            <div id="gnb" onmouseover = "over()">
+                <ul class="row">
+                    <li><a href="#">사업단소개</a></li>
+                    <li><a href="#">교육과정</a></li>
+                    <li><a href="#">디지털배지</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                </ul>
+                <div class="snb_area">
+                    <div class="snb_bg" onmouseout="out()">
+                        <ul>
+                            <li><a href="./greeting.html">단장 인사말</a></li>
+                            <li><a href="./introduction.html">사업 소개</a><li>
+                        </ul>
+                        <ul>
+                            <li><a href="./curri_info.html">교육과정 소개</a></li>
+                            <li><a href="./curri_info.html">교육이수 안내</a></li>
+                            <li><a href="./curri_register.html">교육신청</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">디지털배지 소개</a></li>
+                            <li><a href="#">발급절차</a></li>
+                            <li><a href="#">디지털배지 <br>진위여부 확인</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">Q&A</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                        <ul></ul>
+                    </div><!--snb_bg-->
+                </div><!--snb_area-->
+            </div>
+            <div class="bar"></div>
+            <div class="login">
+                <a href="./login.html">로그인</a>
+            </div>
+        </div><!--menu_wrap-->
     </div><!--row-->
+    <div class="mobile-wrap">
+        <input type="checkbox" id="check_box"/>
+        <label for="check_box" class="ham_menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
 
 
-    <div class="snb_area" onmouseover="over()" onmouseout="out()">
-        <div class="snb_bg">
-            <ul>
-                <li><a href="./greeting.html">단장 인사말</a></li>
-                <li><a href="./introduction.html">사업 소개</a><li>
-            </ul>
-            <ul><li><a href="./curri_info.html">교육과정 소개</a></li>
-                <li><a href="./curri_register.html">교육이수 안내</a></li>
-                <li><a href="./curri_register.html">교육신청</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">디지털배지 소개</a></li>
-                <li><a href="#">발급절차</a></li>
-                <li><a href="#">디지털배지 <br>진위여부 확인</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">Q&A</a></li>
-                <li><a href="#">자료실</a></li>
-            </ul>
-            <ul></ul>
-        </div><!--snb_bg-->
-    </div><!--snb_area-->
+        <div class="mobile_menu_wrap side_menu">
+            <div class="mobile_menu" onclick="click_menu(this);">
+                사업단소개
+            </div><!--mobile_menu-->
+            <div class="mobile_sub_wrap">
+                <div><a href="./about/greeting.html">단장인사말</a></div>
+                <div><a href="./about/introduction.html">사업소개</a></div>
+            </div><!--mobile_sub_wrap-->
+            <div class="mobile_menu" onclick="click_menu(this);">
+                교육과정
+            </div><!--mobile_menu-->
+            <div class="mobile_sub_wrap">
+                <div><a href="./about/curri_info.html">교육과정 소개</a></div>
+                <div><a href="./about/curri_info.html">교육이수 안내</a></div>
+                <div><a href="./about/curri_register.html">교육신청</a></div>
+            </div><!--mobile_sub_wrap-->
+            <div class="mobile_menu" onclick="click_menu(this);">
+                디지털배지
+            </div><!--mobile_menu-->
+            <div class="mobile_sub_wrap">
+                <div>디지털배지 소개</div>
+                <div>발급절차</div>
+                <div>디지털배지 <br>진위여부 확인</div>
+            </div><!--mobile_sub_wrap-->
+            <div class="mobile_menu" onclick="click_menu(this);">
+                커뮤니티
+            </div><!--mobile_menu-->
+            <div class="mobile_sub_wrap">
+                <div>공지사항</div>
+                <div>Q&A</div>
+                <div>자료실</div>
+            </div><!--mobile_sub_wrap-->
+        </div><!--mobile_menu_wrap-->
+
+    </div><!--mobile-wrap-->
 </header><!--header-->
 
 <div class="wrap sub_greeting" id="sub_greeting">
@@ -205,6 +250,21 @@
             tabTitle[index].classList.add("active");
         });
     });
+    function click_menu(element) {
+        var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
+        if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
+            before.nextElementSibling.style.maxHeight = null;   // 기존에 펼쳐진 내용 접고
+            before.classList.remove("active");                  // 버튼 비활성화
+        }
+        element.classList.toggle("active");         // 활성화 여부 toggle
+
+        var mobile_sub_wrap = element.nextElementSibling;
+        if (mobile_sub_wrap.style.maxHeight != 0) {         // 버튼 다음 요소가 펼쳐져 있으면
+            mobile_sub_wrap.style.maxHeight = null;         // 접기
+        } else {
+            mobile_sub_wrap.style.maxHeight = mobile_sub_wrap.scrollHeight + "px";  // 접혀있는 경우 펼치기
+        }
+    }
 
 
 </script>
