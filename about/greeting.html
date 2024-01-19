@@ -24,15 +24,38 @@
                     <img src="../img/logo_wh.png" alt="logo">
                 </a>
             </div><!--logo-->
-
             <div class="menu_wrap">
-                <div id="gnb" onmouseover = "over()" onmouseout="out()">
+                <div id="gnb" onmouseover = "over()">
                     <ul class="row">
                         <li><a href="#">사업단소개</a></li>
                         <li><a href="#">교육과정</a></li>
                         <li><a href="#">디지털배지</a></li>
                         <li><a href="#">커뮤니티</a></li>
                     </ul>
+                    <div class="snb_area">
+                        <div class="snb_bg" onmouseout="out()">
+                            <ul>
+                                <li><a href="./greeting.html">단장 인사말</a></li>
+                                <li><a href="./introduction.html">사업 소개</a><li>
+                            </ul>
+                            <ul>
+                                <li><a href="./curri_info.html">교육과정 소개</a></li>
+                                <li><a href="./curri_info.html">교육이수 안내</a></li>
+                                <li><a href="./curri_register.html">교육신청</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">디지털배지 소개</a></li>
+                                <li><a href="#">발급절차</a></li>
+                                <li><a href="#">디지털배지 <br>진위여부 확인</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">Q&A</a></li>
+                                <li><a href="#">자료실</a></li>
+                            </ul>
+                            <ul></ul>
+                        </div><!--snb_bg-->
+                    </div><!--snb_area-->
                 </div>
                 <div class="bar"></div>
                 <div class="login">
@@ -40,32 +63,6 @@
                 </div>
             </div><!--menu_wrap-->
         </div><!--row-->
-
-
-        <div class="snb_area" onmouseover="over()" onmouseout="out()">
-            <div class="snb_bg">
-                <ul>
-                    <li><a href="#">단장 인사말</a></li>
-                    <li><a href="./introduction.html">사업 소개</a><li>
-                </ul>
-                <ul><li><a href="./curri_info.html">교육과정 소개</a></li>
-                    <li><a href="./curri_register.html">교육이수 안내</a></li>
-                    <li><a href="./curri_register.html">교육신청</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">디지털배지 소개</a></li>
-                    <li><a href="#">발급절차</a></li>
-                    <li><a href="#">디지털배지 <br>진위여부 확인</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">Q&A</a></li>
-                    <li><a href="#">자료실</a></li>
-                </ul>
-                <ul></ul>
-            </div><!--snb_bg-->
-        </div><!--snb_area-->
-
         <div class="mobile-wrap">
             <input type="checkbox" id="check_box"/>
             <label for="check_box" class="ham_menu">
@@ -75,10 +72,10 @@
             </label>
 
 
-            <div class="side_menu">
+            <div class="mobile_menu_wrap side_menu">
                 <div class="m-login">
                     <a href="../login.html">로그인</a>
-                </div><!--m-login-->
+                </div>
                 <div class="mobile_menu" onclick="click_menu(this);">
                     사업단소개
                 </div><!--mobile_menu-->
@@ -90,9 +87,9 @@
                     교육과정
                 </div><!--mobile_menu-->
                 <div class="mobile_sub_wrap">
-                    <div>교육과정 소개</div>
-                    <div>교육이수 안내</div>
-                    <div>교육신청</div>
+                    <div><a href="./curri_info.html">교육과정 소개</a></div>
+                    <div><a href="./curri_info.html">교육과정 이수</a></div>
+                    <div><a href="./curri_register.html">교육신청</a></div>
                 </div><!--mobile_sub_wrap-->
                 <div class="mobile_menu" onclick="click_menu(this);">
                     디지털배지
@@ -111,6 +108,7 @@
                     <div>자료실</div>
                 </div><!--mobile_sub_wrap-->
             </div><!--mobile_menu_wrap-->
+
         </div><!--mobile-wrap-->
     </header><!--header-->
 
