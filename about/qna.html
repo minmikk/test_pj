@@ -74,6 +74,9 @@
 
 
         <div class="mobile_menu_wrap side_menu">
+            <div class="m-login">
+                <a href="../login.html">로그인</a>
+            </div>
             <div class="mobile_menu" onclick="click_menu(this);">
                 사업단소개
             </div><!--mobile_menu-->
@@ -86,7 +89,7 @@
             </div><!--mobile_menu-->
             <div class="mobile_sub_wrap">
                 <div><a href="./curri_info.html">교육과정 소개</a></div>
-                <div><a href="./curri_info.html">교육이수 안내</a></div>
+                <div><a href="./curri_info.html">교육과정 이수</a></div>
                 <div><a href="./curri_register.html">교육신청</a></div>
             </div><!--mobile_sub_wrap-->
             <div class="mobile_menu" onclick="click_menu(this);">
@@ -259,9 +262,10 @@
             tabTitle[index].classList.add("active");
         });
     });
+
     function click_menu(element) {
         var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
-        if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
+        if (before && document.getElementsByClassName("active")[0] !== element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
             before.nextElementSibling.style.maxHeight = null;   // 기존에 펼쳐진 내용 접고
             before.classList.remove("active");                  // 버튼 비활성화
         }
@@ -274,6 +278,7 @@
             mobile_sub_wrap.style.maxHeight = mobile_sub_wrap.scrollHeight + "px";  // 접혀있는 경우 펼치기
         }
     }
+
 
 
 </script>
