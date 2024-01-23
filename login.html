@@ -107,13 +107,15 @@
 
 <section>
     <div class="login-wrap">
-        <div class="login-tit">LogIn</div>
+        <div class="login-tit">
+            <img src="./img/loginlogo1.png" alt="loginlogo1">
+        </div>
 
         <div class="end-box">
             <div class="id-box input-wrap">
                 <div class="tit">아이디</div>
                 <div class="box">
-                    <input type="text" placeholder="ID" class="input-box">
+                    <input type="text" placeholder="아이디를 입력해 주세요." class="input-box">
                 </div>
             </div><!--id_box-->
 
@@ -121,11 +123,11 @@
             <div class="pw-box input-wrap">
                 <div class="tit">비밀번호</div>
                 <div class="box">
-                    <input type="password" placeholder="Password" class="input-box">
+                    <input type="password" placeholder="비밀번호를 입력해 주세요." class="input-box">
                 </div>
             </div><!--pw-box-->
         </div><!--end-box-->
-        <div class="login-btn">Log in</div><!--login-btn-->
+        <div class="login-btn">로그인</div><!--login-btn-->
     </div><!--login-wrap-->
 </section>
 
@@ -206,53 +208,52 @@
 
     .login-wrap {
         width: 350px;
-        height: 400px;
+        min-height: 400px;
         padding: 40px;
-        /*border-radius: 10px;*/
-
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-
         box-shadow: 0 1px 6px 0 rgba(0,0,0,.2);
         border: 1px solid rgba(0,0,0,.1);
         row-gap: 10px;
     }
     .login-tit {
-        width: 100%;
+        width: 160px;
         font-size: 3rem;
         font-weight: 600;
         color: #2c3e50;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         text-align: center;
     }
+    .login-tit img {
+        width: 100%;
+    }
 
-.login-wrap .end-box {
+    .login-wrap .end-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 10px 0;
     width: 100%;
-}
+    }
 
-.input-wrap {
+    .input-wrap {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center ;
         font-size: 1.4rem;
-    margin-top: 20px;
     }
 
-.input-wrap .tit {
+    .input-wrap .tit {
         font-size: 1.5rem;
         /*margin-right: 20px;*/
         margin: 5px 0;
     }
-.input-wrap .box {
+    .input-wrap .box {
         width: 100%;
     }
 
