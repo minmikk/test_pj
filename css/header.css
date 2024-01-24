@@ -1,17 +1,19 @@
 
 header {
     width: 100%;
-    height: 100px;
+    height: 90px;
     /*max-height: 100px;*/
-    padding-top: 20px;
+    /*padding-top: 20px;*/
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: transparent !important;
     position: absolute;
-    z-index: 10;
+    position: fixed;
+    z-index: 100;
     box-sizing: border-box;
+    transition: background-color 0.3s
 
 }
 
@@ -23,11 +25,8 @@ header >.row {
     justify-content: space-between !important;
 }
 
-#logo {
-    /*width: 180px;*/
-    /*height: 100%;*/
-    /*margin-right: 200px;*/
-    /*background-color: #868686;*/
+header .scroll {
+    background-color: #071C30; /* 스크롤 시 배경색 변경 */
 }
 
 #logo > a {
@@ -109,9 +108,9 @@ header .login a:hover {
 .snb_area {
     height: 0;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.8);
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 0;
     right: 0;
     display: flex;
@@ -137,18 +136,17 @@ header .login a:hover {
     justify-content: flex-end;
 }
 .snb_area.navi {
-    animation: slider 1s;
+    animation: slider 0.5s;
     animation-fill-mode: forwards;
 }
 
 .snb_area.navi2 {
-    animation: slider2 1s;
+    animation: slider2 0.5s;
 }
 
 .snb_area h2 {
     width: 200px;
 }
-
 .snb_area ul {
     width: 120px;
 }
@@ -157,14 +155,12 @@ header .login a:hover {
     padding: 5px 0;
     white-space: nowrap;
 }
-
 .snb_area ul > li> a{
     margin-top: 7px;
     color: #ffffff;
     transition: all 0.2s;
     font-size: 1.4rem;
 }
-
 .snb_area ul > li> a:hover {
     color: #86f8ff;
 }

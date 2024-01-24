@@ -1,0 +1,153 @@
+.tab_cont {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin-top: -30px;
+}
+
+.table-wrap {
+    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.table-wrap .table-header.table-body {
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-bottom: 2px solid #071C30;
+}
+
+.table-wrap .table-body {
+    font-size: 1.5rem;
+    height: 50px;
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 2fr 7fr 2fr 1fr;
+    cursor: pointer;
+}
+
+.table-wrap .table-body > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+
+    border-bottom: 1px solid #071C30;
+}
+
+.table-wrap .table-body:first-child > div {
+    border-bottom: none;
+}
+
+.table-wrap .table-body:hover {
+    background-color: rgba(7, 28, 48, 0.05);
+}
+
+
+.table-wrap thead tr th {
+    font-weight: 600 !important;
+    color: #071C30;
+    border-bottom: 2px solid #071C30;
+    position: relative;
+}
+
+.table-wrap thead tr th::after {
+    content: "";
+    height: 20px;
+    position: absolute;
+    border-right: 1px solid #071C30;
+    top: 50%;
+    right: 0;
+    transform:translate(-50%,-50%);
+}
+
+.table-wrap thead tr th:last-child::after {
+    border-right: none;
+}
+
+/*.table-wrap tbody {*/
+/*    font-size: 1.5rem;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.table-wrap tbody tr {*/
+/*    cursor: pointer;*/
+/*    transition:ease-in-out  0.2s;*/
+/*    padding: 5px 0;*/
+/*    height: 55px;*/
+/*    position: relative;*/
+/*}*/
+
+/*.table-wrap tbody tr::after {*/
+/*    content: "";*/
+/*    bottom: 1px;*/
+/*    left: 0;*/
+/*    position: absolute;*/
+/*    border-bottom: 1px solid #071C30;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.table-wrap tbody tr td {*/
+/*    height: inherit;*/
+/*}*/
+
+
+.table-wrap .table-body .title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.table-wrap .title a {
+    width: fit-content;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table-wrap tbody tr .title .material-symbols-outlined {
+    vertical-align: middle;
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 5px;
+    width: 5%;
+}
+
+.pagination-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-wrap ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-wrap ul li {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: ease-in-out 0.25s;
+}
+
+.pagination-wrap ul li:hover {
+    background-color: rgba(7, 28, 48, 0.1);
+}

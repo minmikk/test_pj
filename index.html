@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/common.css">
+
     <title>차세대통신사업단</title>
 
 </head>
@@ -18,7 +19,7 @@
         </a>
     </div>
 
-    <header id="header">
+    <header id="header" class="header">
         <div class="row">
             <div id="logo">
                 <a href="index.html">
@@ -47,7 +48,7 @@
                             <ul>
                                 <li><a href="./about/digital_info.html">디지털배지 소개</a></li>
                                 <li><a href="./about/digital_info.html">발급절차</a></li>
-                                <li><a href="./about/digital_info.html">디지털배지 <br>진위여부 확인</a></li>
+                                <li><a href="./about/digital_info.html">진위여부 확인</a></li>
                             </ul>
                             <ul>
                                 <li><a href="./about/notice.html">공지사항</a></li>
@@ -98,7 +99,7 @@
                 <div class="mobile_sub_wrap">
                     <div><a href="./about/digital_info.html">디지털배지 소개</a></div>
                     <div><a href="./about/digital_info.html"></a>발급절차</div>
-                    <div><a href="./about/digital_info.html">디지털배지 <br>진위여부 확인</a></div>
+                    <div><a href="./about/digital_info.html">진위여부 확인</a></div>
                 </div><!--mobile_sub_wrap-->
                 <div class="mobile_menu" onclick="click_menu(this);">
                     커뮤니티
@@ -369,6 +370,12 @@
             <a href="http://www.hangkong.ac.kr/" target="_blank">
                 <img src="./img/footer_logo_5.png" alt="한국항공대학교">
             </a>
+            <a href="https://www.moe.go.kr/" target="_blank">
+                <img src="./img/footer_logo_6.png" alt="교육부">
+            </a>
+            <a href="https://www.nrf.re.kr/" target="_blank">
+                <img src="./img/footer_logo_7.png" alt="한국연구재단">
+            </a>
         </div><!--logo_wrap-->
 
 
@@ -383,17 +390,21 @@
                         <div class="notice_title">자동이메일수집거부</div>
                     </div><!--notice_wrap-->
 
-                    <div class="address">[34113] 대전광역시 유성구 가정로 201</div>
+                    <div class="address">
+                        02707 서울특별시 성북구 정릉로 77 국민대학교 산학협력관 214호</div>
                     <div class="address">Copyright (c) 2021 COSS. All rights reserved</div>
                 </div><!--footer_content-->
             </div>
 
             <div class="footer_bottom_logo_wrap">
-                <a href="https://www.moe.go.kr/" target="_blank">
-                    <img src="./img/footer_logo_6.png" alt="교육부">
+                <a href="#" target="_blank">
+                    <img src="./img/icon_facebook.png" alt="facebook">
                 </a>
-                <a href="https://www.nrf.re.kr/" target="_blank">
-                    <img src="./img/footer_logo_7.png" alt="한국연구재단">
+                <a href="#" target="_blank">
+                    <img src="./img/icon_instagram.png" alt="instagram">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="./img/icon_youtube.png" alt="youtube">
                 </a>
             </div>
         </div><!--footer_wrap-->
@@ -697,6 +708,21 @@
             mobile_sub_wrap.style.maxHeight = mobile_sub_wrap.scrollHeight + "px";  // 접혀있는 경우 펼치기
         }
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var header = document.getElementById('header');
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                header.classList.add('scroll');
+            } else {
+                header.classList.remove('scroll');
+            }
+        });
+    });
+
+
+
 </script>
 
 
