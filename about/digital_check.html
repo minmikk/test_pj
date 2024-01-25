@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/sub_greeting.css">
+    <link rel="stylesheet" href="../css/digital_check.css">
     <title>차세대통신사업단 | 단장 인사말</title>
 </head>
 <body>
@@ -119,9 +120,9 @@
     <div class="sub_pg_wrap">
 
         <div class="tab_title_wrap">
-            <div class="tab_title greeting_title active">디지털배지 소개</div>
+            <div class="tab_title greeting_title">디지털배지 소개</div>
             <div class="tab_title info_title">발급절차</div>
-            <div class="tab_title info_title">디지털배지 진위여부 확인</div>
+            <div class="tab_title info_title active">디지털배지 진위여부 확인</div>
         </div><!--tab_title_wrap-->
 
         <div class="tab_btn_wrap">
@@ -130,11 +131,11 @@
             </div>
             <div class="tab_bar"></div>
 
-            <div class="tab_btn active">
+            <div class="tab_btn">
                 <a href="#tab_info ">발급절차</a>
             </div>
 
-            <div class="tab_btn">
+            <div class="tab_btn active">
                 <a href="#tab_check">디지털배지 진위여부 확인</a>
             </div>
         </div><!--tab_wrap-->
@@ -152,7 +153,7 @@
 
 
 
-            <div class="tab_cont tab_info active" id="tab_info">
+            <div class="tab_cont tab_info" id="tab_info">
 
                 <div class="cont_title register">
                     발급절차
@@ -165,19 +166,37 @@
 
             <div class="tab_cont tab_info active" id="tab_check">
 
-                <div class="cont_title register">
-                    디지털배지 진위여부 확인
-                </div>
 
-                <div class="cont_text" style="height: 500px;">
-                </div>
+                <div class="cont_text">
+                    <div class="title">
+                        국민대학교 차세대통신 혁신융합대학 과정을 수료하여 발급받은 디지털배지의 진위 여부를 확인합니다.
+                    </div>
 
+                    <div class="check-wrap">
+                        <div class="row">
+                            <div>성명</div>
+                            <div>
+                                <input type="text"/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div>발급 코드</div>
+                            <div>
+                                <input type="number"/>
+                            </div>
+                        </div>
+
+                        <div class="check-btn">확인</div>
+
+                    </div><!--check-wrap-->
+                </div>
             </div><!--tab_info-->
 
         </div><!--contents_wrap-->
     </div><!--sub_pg_wrap-->
 </div><!--wrap, sub_greeting-->
-<footer class="footer_area main_side_padding">
+<footer class="footer_area">
     <div class="logo_wrap">
         <a href="https://www.kookmin.ac.kr/" target="_blank">
             <img src="../img/footer_logo_1.png" alt="국민대학교">
@@ -194,65 +213,44 @@
         <a href="http://www.hangkong.ac.kr/" target="_blank">
             <img src="../img/footer_logo_5.png" alt="한국항공대학교">
         </a>
+        <a href="https://www.moe.go.kr/" target="_blank">
+            <img src="../img/footer_logo_6.png" alt="교육부">
+        </a>
+        <a href="https://www.nrf.re.kr/" target="_blank">
+            <img src="../img/footer_logo_7.png" alt="한국연구재단">
+        </a>
     </div><!--logo_wrap-->
 
 
-    <footer class="footer_area">
-        <div class="logo_wrap">
-            <a href="https://www.kookmin.ac.kr/" target="_blank">
-                <img src="../img/footer_logo_1.png" alt="국민대학교">
-            </a>
-            <a href="https://www.uos.ac.kr/" target="_blank">
-                <img src="../img/footer_logo_2.png" alt="서울시립대학교">
-            </a>
-            <a href="https://www.uc.ac.kr/" target="_blank">
-                <img src="../img/footer_logo_3.png" alt="울산과학대학교">
-            </a>
-            <a href="https://www.jnu.ac.kr/" target="_blank">
-                <img src="../img/footer_logo_4.png" alt="전남대학교">
-            </a>
-            <a href="http://www.hangkong.ac.kr/" target="_blank">
-                <img src="../img/footer_logo_5.png" alt="한국항공대학교">
-            </a>
-            <a href="https://www.moe.go.kr/" target="_blank">
-                <img src="../img/footer_logo_6.png" alt="교육부">
-            </a>
-            <a href="https://www.nrf.re.kr/" target="_blank">
-                <img src="../img/footer_logo_7.png" alt="한국연구재단">
-            </a>
-        </div><!--logo_wrap-->
-
-
-        <div class="footer_wrap">
-            <div class="row">
-                <div>
-                    <img src="../img/logo_gy.png" alt="logo">
-                </div>
-                <div class="footer_content">
-                    <div class="notice_wrap">
-                        <div class="notice_title">개인정보처리방침</div>
-                        <div class="notice_title">자동이메일수집거부</div>
-                    </div><!--notice_wrap-->
-
-                    <div class="address">
-                        02707 서울특별시 성북구 정릉로 77 국민대학교 산학협력관 214호</div>
-                    <div class="address">Copyright (c) 2021 COSS. All rights reserved</div>
-                </div><!--footer_content-->
+    <div class="footer_wrap">
+        <div class="row">
+            <div>
+                <img src="../img/logo_gy.png" alt="logo">
             </div>
+            <div class="footer_content">
+                <div class="notice_wrap">
+                    <div class="notice_title">개인정보처리방침</div>
+                    <div class="notice_title">자동이메일수집거부</div>
+                </div><!--notice_wrap-->
 
-            <div class="footer_bottom_logo_wrap">
-                <a href="#" target="_blank">
-                    <img src="../img/icon_facebook.png" alt="facebook">
-                </a>
-                <a href="#" target="_blank">
-                    <img src="../img/icon_instagram.png" alt="instagram">
-                </a>
-                <a href="#" target="_blank">
-                    <img src="../img/icon_youtube.png" alt="youtube">
-                </a>
-            </div>
-        </div><!--footer_wrap-->
-    </footer><!--footer_area-->
+                <div class="address">
+                    02707 서울특별시 성북구 정릉로 77 국민대학교 산학협력관 214호</div>
+                <div class="address">Copyright (c) 2021 COSS. All rights reserved</div>
+            </div><!--footer_content-->
+        </div>
+
+        <div class="footer_bottom_logo_wrap">
+            <a href="#" target="_blank">
+                <img src="../img/icon_facebook.png" alt="facebook">
+            </a>
+            <a href="#" target="_blank">
+                <img src="../img/icon_instagram.png" alt="instagram">
+            </a>
+            <a href="#" target="_blank">
+                <img src="../img/icon_youtube.png" alt="youtube">
+            </a>
+        </div>
+    </div><!--footer_wrap-->
 </footer><!--footer_area-->
 
 </body>

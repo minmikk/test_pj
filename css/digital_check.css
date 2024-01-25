@@ -1,0 +1,67 @@
+#sub_greeting .sub_pg_wrap .tab_contents_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cont_text {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 200px;
+}
+
+.cont_text .title {
+    font-size: 1.7rem;
+}
+
+.cont_text .check-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.2);
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 50px 100px;
+    row-gap: 20px;
+}
+
+.cont_text .check-wrap .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+}
+
+.cont_text .check-wrap .row > div:first-child {
+    width: 70px;
+}
+
+.cont_text .check-wrap .row > div input {
+    border: 1px solid #071C30;
+    outline: none;
+    height: 30px;
+}
+
+.cont_text .check-wrap .check-btn {
+    padding: 5px 30px;
+    border-radius: 20px;
+    border: 1px solid #2c3e50;
+    background: #2c3e50;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.cont_text .check-wrap .check-btn:hover {
+    background: #ffffff;
+    color: #2c3e50;
+}
