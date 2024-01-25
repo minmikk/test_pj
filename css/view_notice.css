@@ -1,0 +1,133 @@
+.view-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.view-wrap .title {
+    width: 100%;
+    background-color: rgba(7, 28, 48, 0.1);
+    font-size: 1.6rem;
+    padding: 20px 15px;
+    font-weight: 500;
+}
+
+.view-wrap .info-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+.view-wrap .info-wrap .row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 15px;
+    position: relative;
+}
+
+.view-wrap .info-wrap .row >div:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 142px;
+    width: 1px;
+    height: 14px;
+    border-right: 1px solid #dddddd;
+}
+
+.view-wrap .info-wrap .row >div:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 45px;
+    width: 1px;
+    height: 14px;
+    border-right: 1px solid #dddddd;
+}
+
+.view-wrap .info-wrap .file-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: 30px;
+}
+
+.view-wrap .info-wrap .file-wrap .line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    transition: font-weight ease-in-out 0.1s;
+}
+.view-wrap .info-wrap .file-wrap .line:hover {
+    transition: all ease-in-out 1s;
+    font-weight: 700;
+}
+
+.view-wrap .view-contents {
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.view-wrap .pager-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.view-wrap .pager-box .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 20px;
+    border-bottom: 1px solid #071C30;
+    border-top: 1px solid #071C30;
+    transition: ease-in-out all 0.1s;
+    padding-left: 10px;
+}
+
+.view-wrap .pager-box .row:first-child {
+    border-bottom: none;
+}
+
+.view-wrap .pager-box .row:hover {
+    background-color: rgba(7, 28, 48, 0.1);
+}
+
+.view-wrap .list-wrap {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.view-wrap .list-wrap .list-btn {
+    cursor: pointer;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #071C30;
+    border-radius: 20px;
+    transition: ease-in-out 0.1s;
+}
+
+.view-wrap .list-wrap .list-btn:hover {
+    background-color: #071C30;
+    color: white;
+}
+
+.view-wrap {}
