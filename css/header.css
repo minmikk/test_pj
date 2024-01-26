@@ -29,9 +29,13 @@ header .scroll {
     background-color: #071C30; /* 스크롤 시 배경색 변경 */
 }
 
+#logo {
+    width: 95px;
+}
+
 #logo > a {
-    width: 200px !important;
-    height: initial !important;
+    /*width: 150px !important;*/
+    /*height: initial !important;*/
 }
 
 #logo > a > img {
