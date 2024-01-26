@@ -8,13 +8,13 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    /*background: rgba(0, 0, 0, 0.8);*/
     background-color: transparent !important;
     position: absolute;
     position: fixed;
     z-index: 100;
     box-sizing: border-box;
     transition: background-color 0.3s
-
 }
 
 header >.row {
@@ -110,7 +110,7 @@ header .login a:hover {
     overflow: hidden;
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
-    top: 80px;
+    top:90px;
     left: 0;
     right: 0;
     display: flex;
