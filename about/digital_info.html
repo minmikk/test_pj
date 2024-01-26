@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/sub_greeting.css">
+    <link rel="stylesheet" href="../css/digital_check.css">
     <title>차세대통신사업단 | 단장 인사말</title>
 </head>
 <body>
@@ -124,12 +125,12 @@
         </div><!--tab_title_wrap-->
 
         <div class="tab_btn_wrap">
-            <div class="tab_btn">
+            <div class="tab_btn active">
                 <a href="#tab_greeting">디지털배지 소개</a>
             </div>
             <div class="tab_bar"></div>
 
-            <div class="tab_btn active">
+            <div class="tab_btn">
                 <a href="#tab_info ">발급절차</a>
             </div>
 
@@ -140,7 +141,7 @@
 
         <div class="tab_contents_wrap">
 
-            <div class="tab_cont tab_greeting" id="tab_greeting">
+            <div class="tab_cont tab_greeting active" id="tab_greeting">
                 <div class="cont_title">
                     디지털배지 소개
                 </div>
@@ -151,7 +152,7 @@
 
 
 
-            <div class="tab_cont tab_info active" id="tab_info">
+            <div class="tab_cont tab_info " id="tab_info">
 
                 <div class="cont_title register">
                     발급절차
@@ -162,15 +163,40 @@
 
             </div><!--tab_info-->
 
-            <div class="tab_cont tab_info active" id="tab_check">
+            <div class="tab_cont tab_info" id="tab_check">
 
                 <div class="cont_title register">
-                    디지털배지 진위여부 확인
-                </div>
+                    <!--진위여부확인-->
+                    <div class="cont_text">
+                        <div class="title">
+                            국민대학교 차세대통신 혁신융합대학 과정을 수료하여 발급받은 디지털배지의 진위 여부를 확인합니다.
+                        </div>
 
-                <div class="cont_text" style="height: 500px;">
-                </div>
+                        <div class="check-wrap">
+                            <div class="logo-img">
+                                <img src="../img/loginlogo1.png" alt="loginlogo1">
+                            </div>
 
+                            <div class="row">
+                                <div>성명</div>
+                                <div>
+                                    <input type="text"/>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div>발급 코드</div>
+                                <div>
+                                    <input type="number"/>
+                                </div>
+                            </div>
+
+                            <div class="check-btn">확인</div>
+
+                        </div><!--check-wrap-->
+                    </div>
+                    <!--진위여부확인-->
+                </div>
             </div><!--tab_info-->
 
         </div><!--contents_wrap-->
