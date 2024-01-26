@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Header</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background-color: #7fb5ff;
+            padding: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        header.scrolled {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+        }
+
+        .logo-wrap {
+            width: 150px;
+        }
+
+
+
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            position: relative;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: none;
+            position: absolute;
+            top: 100%;
+        }
+
+        nav li:hover > ul {
+            display: block;
+        }
+
+        nav ul li {
+            display: block;
+            text-align: left;
+        }
+
+        section {
+            height: 800px;
+            background-color: #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo-wrap">
+        <img src="./img/logo_wh.png" alt="logo">
+    </div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services </a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="sub-menu">
+        <ul>
+            <li><a href="#">Service 1</a></li>
+            <li><a href="#">Service 2</a></li>
+            <li><a href="#">Service 3</a></li>
+        </ul>
+    </div>
+</header>
+
+<section id="section1" style="height: 1000px;">
+    <h1>Content Section</h1>
+</section>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        header.classList.toggle('scrolled', window.scrollY > 0);
+    });
+
+    // Close submenus when clicking outside
+    document.addEventListener('click', function (e) {
+        const servicesMenu = document.querySelector('nav');
+        if (e.target !== servicesMenu && !servicesMenu.contains(e.target)) {
+            const submenus = document.querySelectorAll('nav ul');
+            submenus.forEach(submenu => submenu.style.display = 'none');
+        }
+    });
+</script>
+</body>
+</html>

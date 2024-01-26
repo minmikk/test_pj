@@ -286,7 +286,12 @@
         } else {
             mobile_sub_wrap.style.maxHeight = mobile_sub_wrap.scrollHeight + "px";  // 접혀있는 경우 펼치기
         }
-    }
+    };
+
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        header.classList.toggle('scrolled', window.scrollY > 0);
+    });
 
 
 

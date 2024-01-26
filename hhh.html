@@ -1,112 +1,695 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/common.css">
+
+    <title>차세대통신사업단</title>
+
 </head>
-<style>
-    /* 모바일 버전 입력*/
-    .navbar_overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 998;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.1s ease;
-    }
+<body style="background: #868686 !important;">
 
-    .navbar_burger {
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        cursor: pointer;
-        color: #000;
-    }
-
-    .navbar_burger_back {
-        position: fixed;
-        top: 1.5rem;
-        right: 1.5rem;
-        cursor: pointer;
-        color: #fff;
-    }
-
-    .navbar_menu {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 50%;
-        height: 100%;
-        background-color: #0e0e0e;
-        padding: 0 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-
-        z-index: 999;
-        color: #000;
-        transition: transform 0.3s ease;
-        transform: translateX(100%);
-    }
-
-    .navbar_menu a {
-        position: relative;
-        color: #ffffff;
-        font-size: 1.5rem;
-        margin-left: 1rem;
-        margin-bottom: 3rem;
-        text-decoration: none;
-    }
-
-    .navbar_menu.active {
-        transform: translateX(0);
-    }
-
-    .navbar_overlay.active {
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-</style>
-<body>
-<!-- 모바일버전 -->
-<div class="navbar_overlay"></div>
-
-<div class="navbar_burger">
-    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-    </svg>
+<div class="top_btn">
+    <a href="#header">
+        <img src="./img/topicon.png" alt="up_icon">
+    </a>
 </div>
 
-<div class="navbar_menu"></div>
+<header id="header" class="header">
+    <div class="row">
+        <div id="logo">
+            <a href="index.html">
+                <img src="./img/logo_wh.png" alt="logo">
+            </a>
+        </div><!--logo-->
+        <div class="menu_wrap">
+            <div id="gnb" onmouseover = "over()">
+                <ul class="row">
+                    <li><a href="#">사업단소개</a></li>
+                    <li><a href="#">교육과정</a></li>
+                    <li><a href="#">디지털배지</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                </ul>
+                <div class="snb_area">
+                    <div class="snb_bg" onmouseout="out()">
+                        <ul>
+                            <li><a href="./about/greeting.html">단장 인사말</a></li>
+                            <li><a href="./about/introduction.html">사업 소개</a><li>
+                        </ul>
+                        <ul>
+                            <li><a href="./about/curri_info.html">교육과정 소개</a></li>
+                            <li><a href="./about/curri_info.html">교육이수 안내</a></li>
+                            <li><a href="./login.html">교육신청</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="./about/digital_info.html">디지털배지 소개</a></li>
+                            <li><a href="./about/digital_procedure.html">발급절차</a></li>
+                            <li><a href="./about/digital_check.html">진위여부 확인</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="./about/notice.html">공지사항</a></li>
+                            <li><a href="./about/qna.html">Q&A</a></li>
+                            <li><a href="./about/data_room.html">자료실</a></li>
+                        </ul>
+                        <ul></ul>
+                    </div><!--snb_bg-->
+                </div><!--snb_area-->
+            </div>
+            <div class="bar"></div>
+            <div class="login">
+                <a href="./login.html">로그인</a>
+            </div>
+        </div><!--menu_wrap-->
+    </div><!--row-->
+    <div class="mobile-wrap">
+        <input type="checkbox" id="check_box"/>
+        <label for="check_box" class="ham_menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+
+        <div class="mobile_menu_wrap side_menu">
+            <div class="m-login">
+                <a href="./login.html">로그인</a>
+            </div>
+            <div class="mobile_menu" onclick="click_menu(this);">
+                사업단소개
+            </div><!--mobile_menu-->
+            <div class="mobile_sub_wrap">
+                <div><a href="./about/greeting.html">단장인사말</a></div>
+                <div><a href="./about/introduction.html">사업소개</a></div>
+            </div><!--mobile_sub_wrap-->
+            <div class="mobile_menu" onclick="click_menu(this);">
+                교육과정
+            </div><!--mobile_menu-->
+            <div class="mobile_sub_wrap">
+                <div><a href="./about/curri_info.html">교육과정 소개</a></div>
+                <div><a href="./about/curri_info.html">교육이수 안내</a></div>
+                <div><a href="./login.html">교육신청</a></div>
+            </div><!--mobile_sub_wrap-->
+            <div class="mobile_menu" onclick="click_menu(this);">
+                디지털배지
+            </div><!--mobile_menu-->
+            <div class="mobile_sub_wrap">
+                <div><a href="./about/digital_info.html">디지털배지 소개</a></div>
+                <div><a href="./about/digital_procedure.html"></a>발급절차</div>
+                <div><a href="./about/digital_check.html">진위여부 확인</a></div>
+            </div><!--mobile_sub_wrap-->
+            <div class="mobile_menu" onclick="click_menu(this);">
+                커뮤니티
+            </div><!--mobile_menu-->
+            <div class="mobile_sub_wrap">
+                <div><a href="./about/notice.html">공지사항</a></div>
+                <div><a href="./about/qna.html">Q&A</a></div>
+                <div><a href="./about/data_room.html">자료실</a></div>
+            </div><!--mobile_sub_wrap-->
+        </div><!--mobile_menu_wrap-->
+
+    </div><!--mobile-wrap-->
+</header><!--header-->
+
+<section class="top_cont" style="margin-top: 200px;">
+    <div class="ban">
+        <canvas class="graph"></canvas>
+    </div><!--ban-->
+
+
+    <div class="field_wrap">
+        <div class="field_menu menu1 on">첨단분야 교육과정 개발</div>
+        <div class="field_menu menu2">첨단분야 교육과정 운영</div>
+        <div class="field_menu menu3">진로</div>
+        <div class="field_menu menu4">첨단분야 교육과정 공유/확산</div>
+        <div class="field_menu menu5">첨단분야 교원 확보 수</div>
+        <div class="field_menu menu6">첨단분야 교육 컨텐츠 만족도</div>
+        <div class="field_menu menu7">첨단분야 지역연계 자원활용 </div>
+    </div><!--field_wrap-->
+
+</section><!--top_cont-->
+
+<section class="center_cont">
+    <div class="center_wrap">
+        <div class="curriculum_wrap">
+            <div class="curri_title">교육과정</div>
+            <div class="curri_text_wrap">
+                <div class="curri_text">
+                    <p>차세대통신사업단은 마이크로디그리를 운영, 그에 맞는 포털사이트 LMS와 연계하여 교과목 신청, 학사정보, 온라인 평가를 진행하고 이를 수료한 학생에게 디지털 뱃지를 부여하여 맞춤 취업활동까지 연계할 수 있습니다.</p>
+                </div><!--curri_text-->
+            </div><!--curri_text_wrap-->
+            <div class="curri_btn">교육신청 바로가기</div>
+        </div><!--curriculum_wrap-->
+
+
+        <div class="curriculum_info">
+            <div class="info_box box1">
+                <div class="box_title">차세대통신 초급</div>
+                <div class="icon_box">
+                    <div class="curri_icon icon1"></div>
+                </div>
+            </div>
+
+            <div class="info_box box2">
+                <div class="box_title">차세대통신 중급</div>
+                <div class="icon_box">
+                    <div class="curri_icon icon2"></div>
+                </div>
+            </div>
+            <div class="info_box box3">
+                <div class="box_title">차세대통신 고급</div>
+                <div class="icon_box">
+                    <div class="curri_icon icon3"></div>
+                </div>
+
+            </div>
+            <div class="info_box box4">
+                <div>통신 SoC</div>
+                <div class="icon_box">
+                    <div class="curri_icon icon4"></div>
+                </div>
+            </div>
+            <div class="info_box box5">
+                <div>통신 SW </div>
+                <div class="icon_box">
+                    <div class="curri_icon icon5"></div>
+                </div>
+            </div>
+            <div class="info_box box6">
+                <div>통신신호처리 </div>
+                <div class="icon_box">
+                    <div class="curri_icon icon6"></div>
+                </div>
+            </div>
+            <div class="info_box box7">
+                <div>인공지능 </div>
+                <div class="icon_box">
+                    <div class="curri_icon icon7"></div>
+                </div>
+            </div>
+            <div class="info_box box8">
+                <div>자율주행 AI </div>
+                <div class="icon_box">
+                    <div class="curri_icon icon8"></div>
+                </div>
+            </div>
+            <div class="info_box box9">
+                <div>양자보안통신</div>
+                <div class="icon_box">
+                    <div class="curri_icon icon9"></div>
+                </div>
+            </div>
+        </div><!--curriculum_info-->
+    </div><!--center_wrap-->
+
+</section><!--center_cont-->
+
+<section class="bottom_cont">
+    <div class="title">차세대통신사업단 소식</div>
+    <div class="board_wrap">
+        <div class="notice_wrap">
+            <div class="title_wrap">
+                <div class="title f_blue">공지사항</div>
+                <div class="more"></div>
+            </div><!--title_wrap-->
+
+            <div class="list_wrap">
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 공지사항</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 공지사항2</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 공지사항3</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 공지사항4</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 공지사항5</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+            </div><!--list_wrap-->
+
+        </div><!--notice_wrap-->
+
+        <div class="notice_wrap">
+            <div class="title_wrap">
+                <div class="title f_blue">Q&A</div>
+                <div class="more"></div>
+            </div><!--title_wrap-->
+
+            <div class="list_wrap">
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 Q&A</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 Q&A2</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 Q&A3</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 Q&A4</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 Q&A5</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+            </div><!--list_wrap-->
+
+        </div><!--notice_wrap-->
+
+        <div class="notice_wrap">
+            <div class="title_wrap">
+                <div class="title f_blue">자료실</div>
+                <div class="more"></div>
+            </div><!--title_wrap-->
+
+            <div class="list_wrap">
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 자료실</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 자료실2</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 자료실3</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 자료실4</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+
+                <div class="list_item">
+                    <div class="list_title">차세대통신사업단 자료실5</div>
+                    <div class="list_date">2023.06.02</div>
+                </div><!--list_item-->
+            </div><!--list_wrap-->
+
+        </div><!--notice_wrap-->
+
+    </div><!--board_wrap-->
+</section><!--bottom_cont-->
+
+<footer class="footer_area">
+    <div class="logo_wrap">
+        <a href="https://www.kookmin.ac.kr/" target="_blank">
+            <img src="./img/footer_logo_1.png" alt="국민대학교">
+        </a>
+        <a href="https://www.uos.ac.kr/" target="_blank">
+            <img src="./img/footer_logo_2.png" alt="서울시립대학교">
+        </a>
+        <a href="https://www.uc.ac.kr/" target="_blank">
+            <img src="./img/footer_logo_3.png" alt="울산과학대학교">
+        </a>
+        <a href="https://www.jnu.ac.kr/" target="_blank">
+            <img src="./img/footer_logo_4.png" alt="전남대학교">
+        </a>
+        <a href="http://www.hangkong.ac.kr/" target="_blank">
+            <img src="./img/footer_logo_5.png" alt="한국항공대학교">
+        </a>
+        <a href="https://www.moe.go.kr/" target="_blank">
+            <img src="./img/footer_logo_6.png" alt="교육부">
+        </a>
+        <a href="https://www.nrf.re.kr/" target="_blank">
+            <img src="./img/footer_logo_7.png" alt="한국연구재단">
+        </a>
+    </div><!--logo_wrap-->
+
+
+    <div class="footer_wrap">
+        <div class="row">
+            <div>
+                <img src="./img/logo_gy.png" alt="logo">
+            </div>
+            <div class="footer_content">
+                <div class="notice_wrap">
+                    <div class="notice_title">개인정보처리방침</div>
+                    <div class="notice_title">자동이메일수집거부</div>
+                </div><!--notice_wrap-->
+
+                <div class="address">
+                    02707 서울특별시 성북구 정릉로 77 국민대학교 산학협력관 214호</div>
+                <div class="address">Copyright (c) 2021 COSS. All rights reserved</div>
+            </div><!--footer_content-->
+        </div>
+
+        <div class="footer_bottom_logo_wrap">
+            <a href="#" target="_blank">
+                <img src="./img/icon_facebook.png" alt="facebook">
+            </a>
+            <a href="#" target="_blank">
+                <img src="./img/icon_instagram.png" alt="instagram">
+            </a>
+            <a href="#" target="_blank">
+                <img src="./img/icon_youtube.png" alt="youtube">
+            </a>
+        </div>
+    </div><!--footer_wrap-->
+</footer><!--footer_area-->
+
 
 
 </body>
-
+<script type="text/javascript"></script>
+<!--<script src="./js/main.js"></script>-->
+<script src="jquery-3.6.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
-    const navbarBurger = document.querySelector('.navbar_burger');
-    const navbarburgerback = document.querySelector('.navbar_burger_back');
-    const navbarMenu = document.querySelector('.navbar_menu');
-    const navbarOverlay = document.querySelector('.navbar_overlay');
-
-    navbarBurger.addEventListener('click', () => {
-        navbarMenu.classList.toggle('active');
-        navbarOverlay.classList.toggle('active');
+    // chart
+    const ctx = document.querySelector('.graph');
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            datasets: [{
+                data: [100,200,300,400,500,600,1000,2000,3000,600,300,800],
+                borderColor: [
+                    'rgba(134, 248, 255, 1)'
+                ],
+                pointStyle: false,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
     });
 
-    navbarburgerback.addEventListener('click', () => {
-        navbarMenu.classList.remove('active');
-        navbarOverlay.classList.remove('active');
+    // tab : ACTIVE
+    const list = document.querySelectorAll('.field_menu');
+    function siblings(el) {
+        let sibChildren = el.parentElement.children;
+        let sibArr = [];
+        Array.from(sibChildren).forEach(x => {
+            sibArr.push(x)
+        });
+        return sibArr.filter(node => node != el);
+    };
+    list.forEach((btn, idx) => {
+        btn.addEventListener('click',function(e){
+            e.preventDefault();
+            siblings(e.currentTarget).forEach((i) => {
+                i.classList.remove('on')
+            });
+            list[idx].classList.add('on')
+        });
     });
 
-    navbarOverlay.addEventListener('click', () => {
-        navbarMenu.classList.remove('active');
-        navbarOverlay.classList.remove('active');
+
+    // 슬라이크 전체 크기(width 구하기)
+    const slide = document.querySelector(".slide");
+    let slideWidth = slide.clientWidth;
+
+    // 버튼 엘리먼트 선택하기
+    const prevBtn = document.querySelector(".slide_prev_button");
+    const nextBtn = document.querySelector(".slide_next_button");
+
+    // 슬라이드 전체를 선택해 값을 변경해주기 위해 슬라이드 전체 선택하기
+    let slideItems = document.querySelectorAll(".slide_item");
+    // 현재 슬라이드 위치가 슬라이드 개수를 넘기지 않게 하기 위한 변수
+    const maxSlide = slideItems.length;
+
+    // 버튼 클릭할 때 마다 현재 슬라이드가 어디인지 알려주기 위한 변수
+    let currSlide = 1;
+
+    // 페이지네이션 생성
+    const pagination = document.querySelector(".slide_pagination");
+
+    for (let i = 0; i < maxSlide; i++) {
+        if (i === 0) pagination.innerHTML += `<li class="active">•</li>`;
+        else pagination.innerHTML += `<li>•</li>`;
+    }
+
+    const paginationItems = document.querySelectorAll(".slide_pagination > li");
+
+    // 무한 슬라이드를 위해 start, end 슬라이드 복사하기
+    const startSlide = slideItems[0];
+    const endSlide = slideItems[slideItems.length - 1];
+    const startElem = document.createElement("div");
+    const endElem = document.createElement("div");
+
+    endSlide.classList.forEach((c) => endElem.classList.add(c));
+    endElem.innerHTML = endSlide.innerHTML;
+
+    startSlide.classList.forEach((c) => startElem.classList.add(c));
+    startElem.innerHTML = startSlide.innerHTML;
+
+    // 각 복제한 엘리먼트 추가하기
+    slideItems[0].before(endElem);
+    slideItems[slideItems.length - 1].after(startElem);
+
+    // 슬라이드 전체를 선택해 값을 변경해주기 위해 슬라이드 전체 선택하기
+    slideItems = document.querySelectorAll(".slide_item");
+    //
+    let offset = slideWidth + currSlide;
+    slideItems.forEach((i) => {
+        i.setAttribute("style", `left: ${-offset}px`);
     });
+
+    function nextMove() {
+        currSlide++;
+        // 마지막 슬라이드 이상으로 넘어가지 않게 하기 위해서
+        if (currSlide <= maxSlide) {
+            // 슬라이드를 이동시키기 위한 offset 계산
+            const offset = slideWidth * currSlide;
+            // 각 슬라이드 아이템의 left에 offset 적용
+            slideItems.forEach((i) => {
+                i.setAttribute("style", `left: ${-offset}px`);
+            });
+            // 슬라이드 이동 시 현재 활성화된 pagination 변경
+            paginationItems.forEach((i) => i.classList.remove("active"));
+            paginationItems[currSlide - 1].classList.add("active");
+        } else {
+            // 무한 슬라이드 기능 - currSlide 값만 변경해줘도 되지만 시각적으로 자연스럽게 하기 위해 아래 코드 작성
+            currSlide = 0;
+            let offset = slideWidth * currSlide;
+            slideItems.forEach((i) => {
+                i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
+            });
+            currSlide++;
+            offset = slideWidth * currSlide;
+            // 각 슬라이드 아이템의 left에 offset 적용
+            setTimeout(() => {
+                // 각 슬라이드 아이템의 left에 offset 적용
+                slideItems.forEach((i) => {
+                    // i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
+                    i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
+                });
+            }, 0);
+            // // 슬라이드 이동 시 현재 활성화된 pagination 변경
+            paginationItems.forEach((i) => i.classList.remove("active"));
+            paginationItems[currSlide - 1].classList.add("active");
+        }
+    }
+    function prevMove() {
+        currSlide--;
+        // 1번째 슬라이드 이하로 넘어가지 않게 하기 위해서
+        if (currSlide > 0) {
+            // 슬라이드를 이동시키기 위한 offset 계산
+            const offset = slideWidth * currSlide;
+            // 각 슬라이드 아이템의 left에 offset 적용
+            slideItems.forEach((i) => {
+                i.setAttribute("style", `left: ${-offset}px`);
+            });
+            // 슬라이드 이동 시 현재 활성화된 pagination 변경
+            paginationItems.forEach((i) => i.classList.remove("active"));
+            paginationItems[currSlide - 1].classList.add("active");
+        } else {
+            // 무한 슬라이드 기능 - currSlide 값만 변경해줘도 되지만 시각적으로 자연스럽게 하기 위해 아래 코드 작성
+            currSlide = maxSlide + 1;
+            let offset = slideWidth * currSlide;
+            // 각 슬라이드 아이템의 left에 offset 적용
+            slideItems.forEach((i) => {
+                i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
+            });
+            currSlide--;
+            offset = slideWidth * currSlide;
+            setTimeout(() => {
+                // 각 슬라이드 아이템의 left에 offset 적용
+                slideItems.forEach((i) => {
+                    // i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
+                    i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
+                });
+            }, 0);
+            // 슬라이드 이동 시 현재 활성화된 pagination 변경
+            paginationItems.forEach((i) => i.classList.remove("active"));
+            paginationItems[currSlide - 1].classList.add("active");
+        }
+    }
+
+    // 버튼 엘리먼트에 클릭 이벤트 추가하기
+    nextBtn.addEventListener("click", () => {
+        // 이후 버튼 누를 경우 현재 슬라이드를 변경
+        nextMove();
+    });
+    // 버튼 엘리먼트에 클릭 이벤트 추가하기
+    prevBtn.addEventListener("click", () => {
+        // 이전 버튼 누를 경우 현재 슬라이드를 변경
+        prevMove();
+    });
+
+    // 브라우저 화면이 조정될 때 마다 slideWidth를 변경하기 위해
+    window.addEventListener("resize", () => {
+        slideWidth = slide.clientWidth;
+    });
+
+    // 각 페이지네이션 클릭 시 해당 슬라이드로 이동하기
+    for (let i = 0; i < maxSlide; i++) {
+        // 각 페이지네이션마다 클릭 이벤트 추가하기
+        paginationItems[i].addEventListener("click", () => {
+            // 클릭한 페이지네이션에 따라 현재 슬라이드 변경해주기(currSlide는 시작 위치가 1이기 때문에 + 1)
+            currSlide = i + 1;
+            // 슬라이드를 이동시키기 위한 offset 계산
+            const offset = slideWidth * currSlide;
+            // 각 슬라이드 아이템의 left에 offset 적용
+            slideItems.forEach((i) => {
+                i.setAttribute("style", `left: ${-offset}px`);
+            });
+            // 슬라이드 이동 시 현재 활성화된 pagination 변경
+            paginationItems.forEach((i) => i.classList.remove("active"));
+            paginationItems[currSlide - 1].classList.add("active");
+        });
+    }
+
+    // 드래그(스와이프) 이벤트를 위한 변수 초기화
+    let startPoint = 0;
+    let endPoint = 0;
+
+    // PC 클릭 이벤트 (드래그)
+    slide.addEventListener("mousedown", (e) => {
+        startPoint = e.pageX; // 마우스 드래그 시작 위치 저장
+    });
+
+    slide.addEventListener("mouseup", (e) => {
+        endPoint = e.pageX; // 마우스 드래그 끝 위치 저장
+        if (startPoint < endPoint) {
+            // 마우스가 오른쪽으로 드래그 된 경우
+            prevMove();
+        } else if (startPoint > endPoint) {
+            // 마우스가 왼쪽으로 드래그 된 경우
+            nextMove();
+        }
+    });
+
+    // 모바일 터치 이벤트 (스와이프)
+    slide.addEventListener("touchstart", (e) => {
+        startPoint = e.touches[0].pageX; // 터치가 시작되는 위치 저장
+    });
+    slide.addEventListener("touchend", (e) => {
+        endPoint = e.changedTouches[0].pageX; // 터치가 끝나는 위치 저장
+        if (startPoint < endPoint) {
+            // 오른쪽으로 스와이프 된 경우
+            prevMove();
+        } else if (startPoint > endPoint) {
+            // 왼쪽으로 스와이프 된 경우
+            nextMove();
+        }
+    });
+
+    // 기본적으로 슬라이드 루프 시작하기
+    let loopInterval = setInterval(() => {
+        nextMove();
+    }, 10000);
+
+    // 슬라이드에 마우스가 올라간 경우 루프 멈추기
+    slide.addEventListener("mouseover", () => {
+        clearInterval(loopInterval);
+    });
+
+    // 슬라이드에서 마우스가 나온 경우 루프 재시작하기
+    slide.addEventListener("mouseout", () => {
+        loopInterval = setInterval(() => {
+            nextMove();
+        }, 3000);
+    });
+
+
+
+
+    const gnb = document.querySelector("#gnb")
+
+    function over(){
+        snb = document.querySelector('.snb_area')
+        snb.className = 'snb_area navi'
+    }
+
+    function out(){
+        snb = document.querySelector('.snb_area')
+        snb.className = 'snb_area navi2'
+    }
+
+
+
+    //모바일메뉴
+    function click_menu(element) {
+        var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
+        if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
+            before.nextElementSibling.style.maxHeight = null;   // 기존에 펼쳐진 내용 접고
+            before.classList.remove("active");                  // 버튼 비활성화
+        }
+        element.classList.toggle("active");         // 활성화 여부 toggle
+
+        var mobile_sub_wrap = element.nextElementSibling;
+        if (mobile_sub_wrap.style.maxHeight != 0) {         // 버튼 다음 요소가 펼쳐져 있으면
+            mobile_sub_wrap.style.maxHeight = null;         // 접기
+        } else {
+            mobile_sub_wrap.style.maxHeight = mobile_sub_wrap.scrollHeight + "px";  // 접혀있는 경우 펼치기
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var header = document.getElementById('header');
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                header.classList.add('scroll');
+            } else {
+                header.classList.remove('scroll');
+            }
+        });
+    });
+
+
+
 </script>
+
+
+
 </html>

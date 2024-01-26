@@ -25,8 +25,8 @@ header >.row {
     justify-content: space-between !important;
 }
 
-header .scroll {
-    background-color: #071C30; /* 스크롤 시 배경색 변경 */
+header.scrolled {
+    background-color: #071C30 !important; /* 스크롤 시 배경색 변경 */
 }
 
 #logo {
