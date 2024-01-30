@@ -1,213 +1,112 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Header</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background-color: #0073e6;
+            padding: 15px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            margin: 0 15px;
+            position: relative;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #003366;
+        }
+
+        .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #0073e6;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: none;
+            padding: 10px;
+        }
+
+        nav li:hover .submenu {
+            display: block;
+        }
+
+        .submenu a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin: 8px 0;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
+<header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <div class="submenu">
+            <a href="#">Products</a>
+            <a href="#">Solutions</a>
+            <a href="#">Sustainability</a>
+        </div>
+        <a href="#">Investors</a>
+        <a href="#">Careers</a>
+        <div class="submenu">
+            <a href="#">Contact</a>
+            <a href="#">Locations</a>
+        </div>
+    </nav>
+</header>
 
-<div class="mobile-wrap">
-    <input type="checkbox" id="check_box"/>
-    <label for="check_box" class="ham_menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </label>
-
-
-    <div class="mobile_menu_wrap side_menu">
-        <div class="mobile_menu" onclick="click_menu(this);">
-            사업단소개
-        </div><!--mobile_menu-->
-        <div class="mobile_sub_wrap">
-            <div>단장인사말</div>
-            <div>사업소개</div>
-        </div><!--mobile_sub_wrap-->
-        <div class="mobile_menu" onclick="click_menu(this);">
-            교육과정
-        </div><!--mobile_menu-->
-        <div class="mobile_sub_wrap">
-            <div>교육과정 소개</div>
-            <div>교육이수 안내</div>
-            <div>교육신청</div>
-        </div><!--mobile_sub_wrap-->
-        <div class="mobile_menu" onclick="click_menu(this);">
-            디지털배지
-        </div><!--mobile_menu-->
-        <div class="mobile_sub_wrap">
-            <div>디지털배지 소개</div>
-            <div>발급절차</div>
-            <div>진위여부 확인</div>
-        </div><!--mobile_sub_wrap-->
-        <div class="mobile_menu" onclick="click_menu(this);">
-            커뮤니티
-        </div><!--mobile_menu-->
-        <div class="mobile_sub_wrap">
-            <div>공지사항</div>
-            <div>Q&A</div>
-            <div>자료실</div>
-        </div><!--mobile_sub_wrap-->
-    </div><!--mobile_menu_wrap-->
-
-</div><!--mobile-wrap-->
-
-
-</body>
-
-<style>
-
-    body,html {
-        font-size: 10px;
-    }
-
-    .mobile-wrap {
-        display: flex;
-        justify-content: flex-end;
-        display: none;
-    }
-
-
-    #check_box {
-        display: none;
-        right:1px;
-    }
-
-    #check_box + label {
-        position: relative;
-        display: block;
-        width: 50px;
-        height: 40px;
-        cursor: pointer;
-        z-index: 2;
-    }
-
-    #check_box + label > span {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 5px;
-        background: #ffffff;
-        border-radius: 5px;
-        transition: all 300ms;
-    }
-
-    #check_box:checked + label > span:nth-child(1) {
-        top: 50%;
-        transform: translate(0, -50%);
-        transform: rotate(45deg);
-    }
-
-    #check_box + label > span:nth-child(2) {
-        top: 50%;
-        transform: translate(0, -50%);
-    }
-
-    #check_box:checked + label > span:nth-child(2) {
-        opacity: 0;
-    }
-
-    #check_box + label > span:nth-child(3) {
-        bottom: 0;
-    }
-
-    #check_box:checked + label > span:nth-child(3) {
-        top: 50%;
-        transform: translate(0, -50%);
-        transform: rotate(-45deg);
-    }
-
-    .side_menu {
-        position: fixed;
-        width: 60vw;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        right: -100vw;
-        transition: all 300ms;
-        z-index: 1;
-        top: 0px;
-        padding: 60px 20px 0 20px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        row-gap: 10px;
-    }
-
-
-    #check_box:checked + label + .side_menu {
-        right: 0;
-    }
-
-
-
-    .side_menu .mobile_menu {
-        color: white;
-        cursor: pointer;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        transition: ease-in-out 0.1s;
-        font-size: 1.4rem;
-        margin-right: 20px !important;
-
-
-    }
-
-    .mobile_menu:after{
-        content: '\002B';
-        color: white;
-        font-weight: bold;
-        margin-left: 5px;
-    }
-    .mobile_menu.active:after {
-        content: "\2212";
-    }
-
-    .mobile_menu:hover {
-        color: #86f8ff;
-    }
-
-    .mobile_sub_wrap {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        font-size: 1.4rem;
-        width: 100%;
-    }
-
-    .mobile_sub_wrap > div {
-        padding: 10px 0 10px 20px;
-        cursor: pointer;
-    color: #ffffff;
-    }
-
-    .mobile_sub_wrap > div:hover {
-        color: #86f8ff;
-    }
-
-
-</style>
+<!-- Content Section -->
+<section style="height: 1000px; background-color: #f2f2f2;">
+    <h1>Content Section</h1>
+</section>
 
 <script>
-    function click_menu(element) {
-        var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
-        if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
-            before.nextElementSibling.style.maxHeight = null;   // 기존에 펼쳐진 내용 접고
-            before.classList.remove("active");                  // 버튼 비활성화
-        }
-        element.classList.toggle("active");         // 활성화 여부 toggle
+    // Show/hide submenu on hover
+    const navItems = document.querySelectorAll('nav a');
+    navItems.forEach(navItem => {
+        navItem.addEventListener('mouseenter', () => {
+            const submenu = navItem.querySelector('.submenu');
+            if (submenu) {
+                submenu.style.display = 'block';
+            }
+        });
 
-        var mobile_sub_wrap = element.nextElementSibling;
-        if (mobile_sub_wrap.style.maxHeight != 0) {         // 버튼 다음 요소가 펼쳐져 있으면
-            mobile_sub_wrap.style.maxHeight = null;         // 접기
-        } else {
-            mobile_sub_wrap.style.maxHeight = mobile_sub_wrap.scrollHeight + "px";  // 접혀있는 경우 펼치기
-        }
-    }
+        navItem.addEventListener('mouseleave', () => {
+            const submenu = navItem.querySelector('.submenu');
+            if (submenu) {
+                submenu.style.display = 'none';
+            }
+        });
+    });
 </script>
+
+</body>
 </html>
