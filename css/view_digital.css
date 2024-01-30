@@ -1,0 +1,40 @@
+.popup-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.6rem;
+    justify-content: space-around;
+}
+
+.popup-wrap .popup-cont {
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-wrap .popup-cont .row {
+    justify-content: flex-start;
+}
+
+
+.popup-wrap .popup-cont .row .title {
+    text-align: justify;
+    width: 80px;
+}
+
+
+.popup-wrap .popup-cont .row span {
+    margin-right: 10px;
+}
+
+
+.popup-wrap .popup-cont .row .cont {}
+
+
+
+.popup-wrap .popup-cont .digital-img-wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.popup-wrap .popup-cont {}

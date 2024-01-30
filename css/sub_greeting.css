@@ -109,12 +109,14 @@
 
 #sub_greeting .sub_pg_wrap .tab_contents_wrap .tab_cont.active {
     display: flex;
+    width: 100%;
 }
 
 #sub_greeting .sub_pg_wrap .tab_contents_wrap .tab_cont {
     display: none;
     /*display: flex;*/
     flex-direction: column;
+    width: 100%;
 }
 
 
