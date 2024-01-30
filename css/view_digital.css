@@ -7,13 +7,14 @@
 }
 
 .popup-wrap .popup-cont {
-    row-gap: 10px;
+    row-gap: 20px;
     display: flex;
     flex-direction: column;
 }
 
 .popup-wrap .popup-cont .row {
     justify-content: flex-start;
+    font-weight: 500;
 }
 
 
