@@ -26,7 +26,7 @@ header >.row {
 }
 
 header.scrolled {
-    background-color: #071C30 !important; /* 스크롤 시 배경색 변경 */
+    background-color: rgba(7, 28, 48, 0.9) !important; /* 스크롤 시 배경색 변경 */
 }
 
 #logo {
@@ -112,7 +112,7 @@ header .login a:hover {
 .snb_area {
     height: 0;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.8);
+    background-color: rgba(7, 28, 48, 0.9);
     position: absolute;
     top:90px;
     left: 0;
@@ -285,22 +285,26 @@ header .login a:hover {
 }
 
 
-/*.mobile-bg {*/
-/*    position: fixed;*/
-/*    width: 100vw;*/
-/*    height: 100vh;*/
-/*    background-color: rgba(0, 0, 0, 0.05);*/
-/*}*/
-
-.side_menu {
+.mobile-bg {
     position: fixed;
-    width: 60vw;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.05);
     right: -100vw;
     transition: all 300ms;
     z-index: 1;
     top: 0px;
+}
+
+.side_menu {
+    position: fixed;
+    right: -100vw;
+    z-index: 1;
+    top: 0px;
+    width: 60vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all 300ms;
     padding: 100px 20px 0 20px;
     box-sizing: border-box;
     display: flex;
