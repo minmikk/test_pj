@@ -11,11 +11,11 @@
 </head>
 <body>
 
-    <div class="top_btn">
-        <a href="#header">
-            <img src="../img/topicon.png" alt="up_icon">
-        </a>
+<button id="topBtn" onclick="scrollToTop()">
+    <div class="img">
+        <img src="../img/topicon.png" alt="up_icon">
     </div>
+</button>
 
     <header id="header" >
         <div class="row">
@@ -372,6 +372,27 @@
         const header = document.querySelector('header');
         header.classList.toggle('scrolled', window.scrollY > 0);
     });
+
+    window.addEventListener('scroll', function () {
+        // 현재 스크롤 위치 확인
+        var scrollPosition = window.scrollY;
+
+        // 스크롤 위치가 200px 이상이면 탑 버튼 표시, 그렇지 않으면 숨김
+        if (scrollPosition > 200) {
+            document.getElementById('topBtn').style.display = 'block';
+        } else {
+            document.getElementById('topBtn').style.display = 'none';
+        }
+    });
+
+    // 탑 버튼 클릭 시 페이지 상단으로 스크롤
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // 부드러운 스크롤 적용
+        });
+    }
+
 
 
 </script>
